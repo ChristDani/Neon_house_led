@@ -1,0 +1,256 @@
+p,h1,h2,h3,h4,h5,h6,a,button{
+    font-family: 'Roboto Condensed','sans-serif';
+}
+
+h1,h3,h5{
+    font-weight: 700;
+}
+
+h2,h6{
+    font-weight: 300;
+}
+
+h4{
+    font-weight: 400;
+}
+
+h1,h4{
+    font-style: italic;
+}
+
+p{
+    font-size: 20px;
+    font-weight: 300;
+    font-style: italic;
+}
+
+form{
+    font-family: 'Roboto Condensed','sans-serif';
+}
+
+.form-color {
+    display: block;
+    margin-top: 10px;
+}
+.none {
+    display: none;
+}
+
+.tabla {
+    margin: 10px 0;
+    height: 400px;
+    overflow-y: scroll;
+}
+
+.sticky {
+    position: sticky;
+    top: 0;
+}
+
+.tmn-input {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.tmn-input input[type="number"]{
+    width: 80px;
+    border: none;
+    border: 1px solid rgb(181, 181, 181);
+    border-radius: 5px;
+    margin:0 10px ;
+    padding: 8px 10px;
+}
+
+/* landing*/
+.landin1 .container{
+    width: auto;
+    height: auto;
+    font-family: sans-serif;
+    letter-spacing: 0.03em;
+    line-height: 1.6;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: auto;
+}
+
+
+.landin1 .title{
+    text-align: center;
+    font-size: 40px;
+    color: white;
+    margin-top: 100px;
+    font-weight: 100;
+    text-shadow: 0 0 0.2em rgb(235, 175, 12), 0 0 0.2em rgb(235, 175, 12);
+}
+
+
+.arreglo {
+    width: auto;
+    float: center;
+}
+
+.landin1 .container .card{
+    width: 245px;
+    height:auto;
+    border-radius: 10px;
+    box-shadow: 0 7px 7px rgba(141, 15, 245, 0.2);
+    overflow:hidden;
+    margin: 20px;
+    text-align:center;
+    transition: all 0.25s;
+    font-family:sans-serif;
+    letter-spacing: 0.02em;
+    line-height: 1.6;
+    background-color: rgb(0, 0, 0);
+}
+
+.landin1 .container .card:hover{
+    transform:translateY(-15px);
+    box-shadow: 0 12px 18px rgba(190, 128, 12, 0.2);
+}
+
+.landin1 .container .card img{
+    width: 243px;
+    height: 200px;
+    /*border-radius: 15px;*/
+}
+
+.landin1 .container .card h4{
+    font-weight: 100;
+    color: rgb(255, 255, 255);
+}
+/*fin landingevento*/
+
+/*Pagina servicios, correccion responsive*/
+@media only screen and (max-width: 1200px) and (min-width: 1025px)  {
+    #ser-gal3{
+        margin-top: 100px;
+    }
+}
+
+
+/* GALERIA DE PRODUCTOS*/
+.galproductos .container{
+    width: auto;
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: auto;
+}
+
+.arreglo {
+    width: auto;
+    float: center;
+}
+
+.galproductos .container .card2{
+    width: 300px;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 10px 10px rgba(223, 22, 22, 0.541);  
+    margin: 10px;
+    text-align: center;
+    transition: all 0.25s;
+    transform:scale(0.95);
+    overflow: hidden;
+}
+
+.galproductos .container .card2:hover{
+    transform:translateY(-10px);
+    box-shadow: 0 12px 12px rgba(223, 196, 43, 0.3);
+}
+
+.galproductos .container .card2 img{
+    width: 300px;
+    height: auto;
+}
+
+.container .card2 p{
+    font-weight: 500;
+    font-weight: bold;
+    color: rgb(255, 255, 255);
+    padding: 0 1rem;
+}
+
+/*FIN GALERIA DE PRODUCTOS*/
+
+/* Modal Producto(imagenes) */
+
+
+
+#proRojo { color:rgb(255, 255, 255); 
+    background-color:rgb(100, 16, 121); }
+
+#proAzul { color:rgb(255, 255, 255); 
+        background-color:rgb(100, 16, 121); }
+#proAmari { color:rgb(255, 255, 255); 
+            background-color:rgb(100, 16, 121); }
+
+#proAnara { color:rgb(255, 255, 255); 
+        background-color:rgb(100, 16, 121); }
+    
+#proCele{ color:rgb(255, 255, 255); 
+        background-color:rgb(100, 16, 121); }
+
+#proFuc { color:rgb(255, 255, 255); 
+        background-color:rgb(100, 16, 121); }
+
+#proRosa { color:rgb(255, 255, 255); 
+        background-color:rgb(100, 16, 121); }
+
+#proMora { color:rgb(255, 255, 255); 
+        background-color:rgb(100, 16, 121); }
+
+#proBla { color:rgb(255, 255, 255); 
+        background-color:rgb(100, 16, 121); }
+
+#proMulti { color:rgb(255, 255, 255); 
+        background-color:rgb(100, 16, 121); }
+                      
+/* Fin Modal Producto */
+
+
+/*Tabla Lista productos de compa - tablaAdministrar*/
+
+#tablecart th {
+    font-weight: bold;     
+    padding: 8px;     
+    background: #b9c9fe;
+    border-top: 4px solid #aabcfe;    
+    border-bottom: 1px solid #fff; 
+    color: #039; }
+
+#tablecart td {    
+    padding: 8px;     
+    background: #e8edff;     
+    border-bottom: 1px solid #fff;
+    color: #669;    
+    border-top: 1px solid transparent; }
+
+#tablecart tr:hover td { 
+    background: #d0dafd; 
+    color: #339; }
+
+
+
+
+
+.tableAdm th{
+    font-weight: bold;     
+    padding: 8px;     
+    background: #b9c9fe;
+    border-top: 4px solid #aabcfe;    
+    border-bottom: 1px solid #fff; 
+    color: #039; 
+}
+
+#tableAdm td {    
+    padding: 8px;     
+    background: #e8edff;     
+    border-bottom: 1px solid #fff;
+    color: #669;    
+    border-top: 1px solid transparent; }
+/*Fin Tabla Lista*/

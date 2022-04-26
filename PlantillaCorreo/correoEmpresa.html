@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+            <html lang="es_ES">
+            <head>
+                <meta charset="UTF-8">
+                <meta http-equiv="X-UA-Compatible" content="IE=edge">
+                <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                <title>Email</title>
+                <style>
+                    * {
+                        margin: 0;
+                        box-sizing: border-box;
+                        font-family: Calibri, sans-serif;
+                    }
+            
+                    .container {
+                        width: 80%;
+                        height: 100vh;
+                        margin: 0 auto;
+                    }
+            
+                    h1 {
+                        text-transform: uppercase;
+                        font-size: 3.3rem;
+                        text-align: center;
+                        font-weight: bold;
+                        color: #2154B0;
+                    }
+            
+                    .img__sent {
+                        display: block;
+                        margin: auto;
+                        width: 300px;
+                    }
+            
+                    .text {
+                        text-align: center;
+                        font-size: 1.5rem;
+                        font-weight: 400;
+                        margin-bottom: 5px;
+                    }
+            
+                    .texts {
+                        width: 60%;
+                        margin: 0 auto;
+                        font-size: 1.1rem;
+                        border: 3px double lightslategray;
+                        padding: 3px 7px;
+                    }
+            
+
+                </style>
+            </head>
+            <body>
+                <div class="container">
+                    <h1>Neon Led Store</h1>
+                    <img class="img__sent" src="https://i.ibb.co/4mts7RJ/imgcorreo.webp" alt="">
+                    <p class="text">Un nuevo cliente se ha contactado:</p>
+                    <div class="texts">
+                        <p><b>Nombres:</b> '.$_POST['vis_nombre'].'</p>
+                        <p><b>Apellidos:</b> '.$_POST['vis_apellidos'].'</p>
+                        <p><b>Correo:</b> '.$_POST['vis_email'].'</p>
+                        <p><b>Teléfono:</b> '.$_POST['vis_telefono'].'</p>     
+                        <p><b>Mensaje-Pregunta:</b> '.$_POST['vis_pregunta'].'</p>
+                    <br>
+                    <img src="https://i.postimg.cc/90kRcBxc/logo.jpg" alt="Logo" width="80px" style="position:relative; left: 41%;">
+                  
+                </div>
+            </body>
+            </html>

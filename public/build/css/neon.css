@@ -1,0 +1,563 @@
+
+.neontabla {
+    border: 2px solid white;
+    border-radius: 40px;
+    padding-bottom: 8px;
+    font-family: 'Roboto Condensed', 'sans-serif';
+    box-shadow:  0 0 5px white, 0 0 10px white ;
+
+}
+
+
+.neontabla.amarillo {
+    box-shadow:  0 0 5px yellow, 0 0 10px yellow ;
+}
+
+.neontabla.cyan {
+    box-shadow:  0 0 5px cyan, 0 0 10px cyan ;
+}
+
+.neontabla.fondoplomo {
+
+    background: rgba(175, 179, 164, 0.3)
+}
+
+.neontabla a {
+    /* El margin right, */ 
+    margin-left: 10px;
+    margin-right: 38px;
+    text-align: center;
+    color: yellow ;
+    text-decoration: none;
+    font-size: 15px
+}
+
+.neontabla a .compra {
+    margin-right: -26px;
+}
+
+
+/* MODO CELULAR*/ 
+@media only screen and (max-width: 430px){
+    
+    .neontabla {
+        border-radius: 30px !important;
+    }
+    
+    .neontabla a{ margin-right: 10px;  ;
+    }
+    .neontabla a .compra {
+        margin-right: 3px;
+    }
+}
+
+
+.neoninput {
+    box-shadow: 0 7px 2px -6px white;
+    box-shadow: 0 5px 2px -6px red;
+}
+
+.neones {
+    text-align: center;
+    color: white !important;
+    margin-top: 20px;
+    font-size: 45px;
+    text-shadow: 0 0 5px red, 0 0 15px red, 0 0 30px red, 0 0 40px red;
+    font-family: 'Dancing Script', cursive;
+}
+.neones2 {
+    text-align: center;
+    color: white !important;
+    margin-top: 20px;
+    font-size: 35px;
+    text-shadow: 0 0 5px red, 0 0 15px red, 0 0 30px red, 0 0 40px red;
+    font-family: Concert One;
+}
+.neones3 {
+    text-align: center;
+    margin-top: 10px;
+    color: white !important;
+    font-size:20px;
+    text-shadow: 0 0 5px red, 0 0 15px red, 0 0 30px red, 0 0 40px red;
+    font-family: Concert One;
+}
+.neones.azules {
+    text-shadow: 0 0 5px blue, 0 0 15px blue, 0 0 30px blue, 0 0 40px blue;
+}
+
+@media only screen and (max-width: 376px){
+    .neones  {font-size: 25px   ;
+    }
+}
+
+
+
+
+.neonbotton {
+
+    color: white;
+    margin: 30;
+    font-size: 20px;
+    text-shadow: 0 0 5px yellow, 0 0 10px yellow, 0 0 20px yellow; 
+}
+
+.neonbottonlanding {
+    background-color:black;
+    border: 2px solid white !important;
+    color: white;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 0.9rem;
+    text-shadow: 0 0 15px , 0 0 16px rgb(4,41,95);
+    box-shadow: inset 0 0 5px white, 0 0 10px white;
+}
+
+.neontextlanding {
+    float: left;
+    color: #fff!important;
+    border: 2px solid white !important;
+}
+
+.neontextlanding::-webkit-input-placeholder {
+    color: white ;
+}
+
+
+@media only screen and (max-width: 700px){
+
+    .neontextlanding{
+        font-size: 12px;
+    }
+
+    .neontextlanding::-webkit-input-placeholder {
+            font-size: 12px;
+            color: white;
+    }
+}
+
+@media only screen and (max-width: 360px){
+    .neontextlanding::-webkit-input-placeholder {
+            font-size: 6px;
+            color: white;
+    }
+}
+
+
+.neontextlanding:hover {
+    border: 2px solid white;
+    margin: 30;
+    box-shadow: inset 0 0 5px white, 0 0 15px white;
+}
+
+.iconoFont {
+    font-size:35px;
+    float: left;
+    margin-top: 1rem;
+    margin-right: 1rem;
+}
+
+/* EXCLUSIVO DE CONTACTO*/
+.titulocont {
+    display:none;
+    color: white;
+    font-weight: bold;
+    text-align: center;
+}
+
+
+.rellenocontact {
+    visibility: hidden;
+}
+
+@media only screen and (max-width: 700px){
+    .titulocont {
+        display: block;
+        font-size: 30px;
+    }
+}
+
+@media only screen and (max-width: 700px){
+    .neontabla.redesociales  {
+        display: none;
+        
+    }
+}
+
+/*SALVADO DE INDEX.CSS, puede servir para el fondo */
+.mainFondo{height:870px;object-fit:cover}
+
+
+/*MODAL LANDING PAGE*/
+#padreModalLanding{
+    background-color: transparent;
+    border-color: transparent;
+}
+
+@media(max-width: 700px){
+    #btn-modal-asesoria {
+        transform: scale(0.8);
+    }
+}
+
+.btnmorado{
+    display: block;
+    width: 100px;
+    height: 40px;
+    text-align: center;
+    padding-top: 5px;
+    margin: auto;
+    border-radius: 10px;
+}
+
+.btnmorado:hover{
+    background: #a945c7;
+    box-shadow: 0 0 5px #a945c7, 0 0 8px
+    #a945c7, 0 0 15px #a945c7;
+}
+
+.w1-100:hover{
+
+    -webkit-transform: scale(1.05);
+    -moz-transform: scale(1.05);
+    -o-transform: scale(1.05);
+    -ms-transform: scale(1.05);
+    transform: scale(1.05)       
+}
+
+.w2-100:hover{
+
+    -webkit-transform: scale(1.05);
+    -moz-transform: scale(1.05);
+    -o-transform: scale(1.05);
+    -ms-transform: scale(1.05);
+    transform: scale(1.05)       
+}
+
+.w3-100:hover{
+
+    -webkit-transform: scale(1.05);
+    -moz-transform: scale(1.05);
+    -o-transform: scale(1.05);
+    -ms-transform: scale(1.05);
+    transform: scale(1.05)       
+}
+
+.w4-100:hover,.w5-100:hover{
+    -webkit-transform:scale(1.1);
+    transform:scale(1.1);
+    overflow:hidden;     
+}
+
+#formHogar { color:rgb(255, 255, 255); 
+    background-color:rgb(100, 16, 121); }
+
+#formEvento { color:rgb(255, 255, 255); 
+    background-color:rgb(100, 16, 121); }
+
+#formNegocio{ color:rgb(255, 255, 255); 
+    background-color:rgb(100, 16, 121); }  
+
+
+/* Estilo de volumen */
+
+
+.contenedor{
+    width: 75%;
+    margin-top: 60px;
+}
+.slider::after{
+    content:'900';
+    color: white;
+    font-size: 2rem;
+    position: absolute;
+    left: 80%;
+    margin-top: 26px;
+}
+.slider::before{
+    content:'100';
+    color: white;
+    font-size: 2rem;
+    position: absolute;
+    left: 0%;
+    margin-top: 26px;
+}
+.slider{
+    -webkit-appearance: none;
+    width: 100%;
+    height: 20px;
+    background-color: blueviolet;
+    outline: none;
+    position: relative;
+    opacity: 0.7;
+    -webkit-transition: 0.2s;
+    transition: opacity 0.2s;
+    border-radius: 12px;
+    margin-bottom: 10px;
+    box-shadow: 0px 1px 10px 1px black;
+}
+.slider:hover{
+    opacity: 1;
+}
+.slider::-webkit-slider-thumb{
+    -webkit-appearance: none;
+    appearance: none;
+    width: 40px;
+    height: 40px;
+    background: orange;
+    border-radius: 50%;
+    cursor: pointer;
+}
+.slider::-moz-range-thumb{
+    width: 40px;
+    height: 40px;
+    background: orange;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.valor{
+    margin-top: 50px;
+    opacity: 0.7;
+}
+
+/* estilo de la pagina RegistroCliente */
+.espacio{
+    margin: 50px auto;
+}
+.medio-registro{
+    width: 50%;
+    
+    position: relative;
+    top: 90%;
+    left: 20%;     
+    padding-left: 8%; 
+    height: 530px;   
+}
+
+.altura-regi{
+    padding-top: 20px;
+}
+
+
+/* contenido de la pagina RegistroCliente */
+.tamaño-reg{
+    height: 810px;
+}
+.culto{
+    margin-bottom: 15px;
+}
+.check{
+    margin: 5px;
+    top: 3px;
+    position: relative;
+}
+.pregunta-Reg{
+    float: right;
+    display: flex;
+    margin-right: -45px;
+}
+.espacio-reg{
+    margin-left: 6%;
+    width: 77%;
+}
+.footer-registro{
+    margin-top: 10px;
+}
+.record-right{
+    float: left;
+    display: flex;
+}
+.record-regis{
+    margin-left: 10px;
+}
+.enlace-registro{
+    top: 3px;
+    position: relative;
+}
+
+/* estilo de la pagina ProductoDetallado */
+.recipienteProDeta{
+    width: 100%;
+    padding-top: 5%;
+    padding-bottom: 15%;
+    display: flex;
+    justify-content: center;
+}
+
+.tamano-carrus{
+    width: auto;
+    margin: 10% 2%;
+    margin-top: 2.5%;
+}
+.tamano_des{
+    width: 50%;
+}
+.tam{
+    height: 100%;
+}
+
+
+/* estilo de la pagina Administrador */
+.espAdminR{
+    padding: 0 0;
+}
+.sobre-admin{
+    margin-left: 20px;
+    color: #a4a4a4c9;
+}
+.recipient{
+    width: 90%;
+    
+    display: flex;
+    justify-content: center;
+}
+.nav-dashboard{
+    width: 100%;
+}
+.mostrar-res{/*Fondo gris de tabla, form -Administrarphp*/
+    width: 100%;
+    background-color:black;
+}
+.contenedor-menuAdmin{
+    width: 50%;
+}
+
+ .contenedor-menuAdmin li a{
+    text-decoration: none;
+ }
+ ul .li2_admin15{
+    background-color: #a945c7;
+}
+.listaAdmin:hover{
+    color:#ecd981;
+ }
+.fondo-null{
+    display: none;
+}
+/* @media (max-width: 1499px){
+    a .listaAdmin{
+        width: 80%;
+        font-size: 16px;
+        list-style-type: none;
+        background-color: rgba(73, 50, 245, 0.616);
+        margin-top: 10px;
+        border-radius: 5px; 
+        padding: 10px 30px;
+    }
+    
+}
+@media (max-width: 1000px){
+    a .listaAdmin{
+        width: 90%;
+        font-size: 15px;
+        list-style-type: none;
+        margin-top: 10px;
+        border-radius: 5px;
+        padding: 10px 10px;
+     }
+
+}
+@media (max-width: 768px){
+    a .listaAdmin{
+        width: 80%;
+        font-size: 12px;
+        list-style-type: none;
+        margin-top: 10px;
+        border-radius: 5px;
+        padding: 5px 7px;
+     }
+
+} */
+.espacio-AA{
+    margin: 2% 35%;
+}
+/* .espacio-admin{
+    margin: auto; 
+} */
+
+
+
+
+
+
+
+
+
+
+
+/*Cambios btns de prueba*/
+
+.contenedor-menuAdmin{
+    position:left;
+    top: 0;
+ /*para que 100pre este fijado en la parte superior*/
+    width: 350px;  /*relacion con margin-left de .mainTitulo*/
+    height: 50vh;
+    background-color:rgb(0, 0, 0);
+    transform: translateX(-350px);
+    transition: transform 0.3s;
+}
+
+@media screen and (min-width: 768px){ /* 768 para pantalla tablet, la barra nav*/
+    .contenedor-menuAdmin{
+        transform: translateX(0);
+    }
+}
+
+@media screen and (max-width: 1024px){ /* 1024 para pantalla escritorio laptop en hd, la barra nav*/
+    .navBtns{
+        transform: translateX(-300px);
+    }
+}
+
+
+.mostrar-res{
+    margin-left: 0; /* 0 sera en modo movil*/
+    min-height: 50vh;
+
+}
+@media screen and (min-width: 768px){ /* 768 para pantalla tablet, la barra nav*/
+    .mostrar-res{
+        margin-left: 60px;
+    }
+}
+
+@media screen and (max-width: 1024px){ /* 1024 para pantalla escritorio laptop en hd, la barra nav*/
+    .mostrar-res{
+        margin-right: 60px;
+    }
+}
+
+
+
+
+.listaAdmin{
+    width: 50px;
+    height: 50px;
+    padding: 7px;
+    border-radius: 10px;
+    background-color: rgb(109, 44, 170);
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    font-size: 18px;
+    margin-top: auto;
+}
+
+
+
+.toggle-menu{
+    position: absolute;
+    top: 0;
+    left: 400px;
+    font-size: 2.5rem;
+    color: rgb(148, 49, 187);
+    width: 50px;
+    height: 50px;
+    padding: 1rem;
+    z-index: 100;
+}
+@media screen and (min-width: 600px){ /* para pantalla tablet, la barra nav*/
+    .toggle-menu{
+        display:none; /*es para mostrar el icono de hamburguesa cuando este modo tablet o celular*/
+    }
+}

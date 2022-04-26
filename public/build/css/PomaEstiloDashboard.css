@@ -1,0 +1,28 @@
+
+.list::-webkit-scrollbar {
+    width: 0;
+   } 
+
+.list {
+    overflow-y: scroll;
+    /*height: 100%; */
+}
+
+.list:last-child {
+    padding-bottom: 150px;
+}
+
+.app-list a {
+    text-decoration:none;
+    color: white;
+    padding-bottom: 1px;
+}
+.iconos {
+    line-height: 2.3;
+}
+
+
+
+
+
+
