@@ -24,3 +24,6 @@ class Color extends ActiveRecord{
         return $resultado;
     }
 }
+
+
+// Hoola
