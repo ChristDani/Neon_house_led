@@ -81,7 +81,7 @@
                                 </select> 
                                 
                                 <div class="pt-3 pb-3">
-                                <i class="fa-solid fa-dolly"></i><a onclick="sendCart()" class="neonbottonlanding btn btn-primary my-sm-3 border-0" style="width: auto; height:auto font-size: 18px;" id="addcart"> Comprar </a>
+                                <i class="fa-solid fa-dolly"></i><a onclick="sendCart(), window.location.href='/cart'" class="neonbottonlanding btn btn-primary my-sm-3 border-0" style="width: auto; height:auto font-size: 18px;" id="productodet"> Comprar </a>
                                 </div>
                             </form>
 

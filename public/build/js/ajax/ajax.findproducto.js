@@ -38,6 +38,7 @@ function seleccionarColor2(){
 
 function sendCart() 
 {
+    console.log("funciona");
     $(document).on("click", "#addcart", function (e) 
     {
         let selectColor = document.getElementById('selectColor');
@@ -54,7 +55,7 @@ function sendCart()
                 console.log(e);
                 let json = JSON.parse(e);
                 console.log("ya funciona");
-                window.location.href ="#"; 
+                window.location.href ="cart"; 
             }
         });    
     })
