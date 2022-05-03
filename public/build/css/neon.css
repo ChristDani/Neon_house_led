@@ -406,158 +406,190 @@
     color: #a4a4a4c9;
 }
 .recipient{
-    width: 90%;
-    
-    display: flex;
+    width: auto;   
+    display:flex;
     justify-content: center;
 }
 .nav-dashboard{
     width: 100%;
 }
-.mostrar-res{/*Fondo gris de tabla, form -Administrarphp*/
-    width: 100%;
-    background-color:black;
-}
-.contenedor-menuAdmin{
-    width: 50%;
-}
+/* .mostrar-res{Fondo gris de tabla, form -Administrarphp
+    width: auto;
+    background-color:rgb(224, 108, 108);
+} */
 
- .contenedor-menuAdmin li a{
-    text-decoration: none;
- }
- ul .li2_admin15{
-    background-color: #a945c7;
-}
-.listaAdmin:hover{
+
+.main-menu_link:hover{
     color:#ecd981;
  }
 .fondo-null{
     display: none;
 }
-/* @media (max-width: 1499px){
-    a .listaAdmin{
-        width: 80%;
-        font-size: 16px;
-        list-style-type: none;
-        background-color: rgba(73, 50, 245, 0.616);
-        margin-top: 10px;
-        border-radius: 5px; 
-        padding: 10px 30px;
-    }
-    
-}
-@media (max-width: 1000px){
-    a .listaAdmin{
-        width: 90%;
-        font-size: 15px;
-        list-style-type: none;
-        margin-top: 10px;
-        border-radius: 5px;
-        padding: 10px 10px;
-     }
 
-}
-@media (max-width: 768px){
-    a .listaAdmin{
-        width: 80%;
-        font-size: 12px;
-        list-style-type: none;
-        margin-top: 10px;
-        border-radius: 5px;
-        padding: 5px 7px;
-     }
-
-} */
 .espacio-AA{
-    margin: 2% 35%;
+    text-align: center;
 }
-/* .espacio-admin{
+.espacio-admin{
     margin: auto; 
-} */
+}
 
 
 
+/*Cambios Botones Administrar.php*/
 
-
-
-
-
-
-
-
-/*Cambios btns de prueba*/
-
-.contenedor-menuAdmin{
-    position:left;
+.navBtns{
+    position: relative; /*position:fixed;*/
     top: 0;
- /*para que 100pre este fijado en la parte superior*/
-    width: 350px;  /*relacion con margin-left de .mainTitulo*/
-    height: 50vh;
-    background-color:rgb(0, 0, 0);
+    width: 350px; 
+    height: 60vh;
+    padding-top: 1.5rem;
+    background-color:rgb(0, 0, 0); /*Cambiar a rojo para ver panel*/
     transform: translateX(-350px);
     transition: transform 0.3s;
 }
 
 @media screen and (min-width: 768px){ /* 768 para pantalla tablet, la barra nav*/
-    .contenedor-menuAdmin{
-        transform: translateX(0);
-    }
-}
-
-@media screen and (max-width: 1024px){ /* 1024 para pantalla escritorio laptop en hd, la barra nav*/
     .navBtns{
-        transform: translateX(-300px);
+        transform: translateX(-500px);
+        /* margin-right: -200px; */
     }
 }
 
-
-.mostrar-res{
-    margin-left: 0; /* 0 sera en modo movil*/
-    min-height: 50vh;
-
-}
-@media screen and (min-width: 768px){ /* 768 para pantalla tablet, la barra nav*/
-    .mostrar-res{
-        margin-left: 60px;
+@media screen and (min-width: 1024px){ /* 1024 para pantalla escritorio laptop en hd, la barra nav*/
+    .navBtns{
+        transform: translateX(0);
+        /* margin-right: -200px; */
     }
 }
-
-@media screen and (max-width: 1024px){ /* 1024 para pantalla escritorio laptop en hd, la barra nav*/
-    .mostrar-res{
-        margin-right: 60px;
-    }
-}
-
 
 
 
 .listaAdmin{
-    width: 50px;
-    height: 50px;
-    padding: 7px;
-    border-radius: 10px;
-    background-color: rgb(109, 44, 170);
-    color: rgb(255, 255, 255);
-    text-decoration: none;
-    font-size: 18px;
-    margin-top: auto;
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px; /* 10px */
+    font-size: 13px;  /* 10px */
 }
 
+.main-menu_link{
+    width: 250px;
+
+    padding: 0.5rem 3rem;  /* padding: 0.5rem 2rem; */
+    border-radius: 12px;
+    background-color: rgb(142, 54, 168);
+    color: rgb(255, 255, 255);
+    text-decoration: none; /*comentar*/
+    font-size: 14px;
+    font-weight: bolder;
+}
+
+
+
+.main-menu_icon{
+    margin-right: 1.5rem; /* 2 rem */
+}
+@media screen and (min-width: 768px){ /* 768 para pantalla tablet, para el menu*/
+    .main-menu_icon{
+        transform: translateX(260px);/* 240px*/
+        color: rgb(255, 255, 255);
+    }
+}
+@media screen and (min-width: 1024px){ /* 1024 para pantalla escritorio, laptop en hd*/
+    .main-menu_icon{
+        transform: translateX(0); /*0 para que no cambie el tamaño de iconos*/
+        color: rgb(255, 255, 255);
+    }
+}
 
 
 .toggle-menu{
     position: absolute;
     top: 0;
-    left: 400px;
-    font-size: 2.5rem;
+    left: 340px; 
+    font-size: 2.1rem;
     color: rgb(148, 49, 187);
-    width: 50px;
-    height: 50px;
+    width: 30px; /*50px*/
+    height: 30px; /*50px*/
     padding: 1rem;
     z-index: 100;
 }
-@media screen and (min-width: 600px){ /* para pantalla tablet, la barra nav*/
+@media screen and (min-width: 768px){ /*min-widht: 600px*/
     .toggle-menu{
-        display:none; /*es para mostrar el icono de hamburguesa cuando este modo tablet o celular*/
+        display: none; 
+    }   
+
+}
+@media screen and (max-width: 1024px){
+
+    #cambioFontHistorial{   
+        margin-left: -250px;
+        width: 320px;
+        }
+    #cambioDatosUsuarios{
+        transform: translateX(-100px);
+        width: auto;
+        }
+    #cambioFontContra{
+        transform: translateX(-80px);
+        width: auto;
+        }
+    #verificacionCorreo{
+        transform: translateX(-80px);
+        width: auto;
+        }
+
+}
+
+
+
+.main-Admin{
+    padding-left: 0;
+}
+.main-Admin--show{
+    transform: translateX(260px);
+}
+
+
+.nav--show{
+    transform: translateX(-300px); /*transform: translateX(-170px);*/
+}
+
+.nav--show .toggle-menu{
+    left: 285px; /*left: 245px;left: 245px;*/
+    top: 0; /*comentar top 0*/
+    color: rgb(148, 49, 187);
+}
+
+.main-Admin--show .listaAdmin{
+    transform: translateX(-300px);
+}
+
+.main-Admin--show .main-menu_icon{
+    transform: translateX(300px);
+    color: white;
+}
+
+
+.mainTitulo{
+    margin-left: 0; /* 0 sera en modo movil*/
+    padding-top: 2.5rem;
+    background-color: rgb(0, 0, 0);
+    text-align: center;
+    overflow: hidden; /*para ocultar el margen en el titulo h1*/
+}
+@media screen and (min-width: 768px){ /* 768 para pantalla tablet, para el menu*/
+    .mainTitulo{
+        margin-left: 50px;
     }
 }
+@media screen and (min-width: 1024px){ /* 1024 para pantalla escritorio, laptop en hd*/
+    .mainTitulo{
+        margin-left: 350px; /* para que se muestre completo*/
+    }
+}
+
+#cambioDatosUsuarios{
+    margin-left: -10px;
+}
+
+/*Fin Cambio Botones Administrar.php*/

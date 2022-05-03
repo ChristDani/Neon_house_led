@@ -76,3 +76,26 @@ function correoverificacion(){
     });
 }
 
+
+
+
+
+/*Efecto botones menu Administrar */
+
+const mainNav = document.getElementById('main-nav');
+const toggleMenu = document.getElementById('toggle-menu');
+const mainAdmin = document.getElementById('main-Admin');
+
+toggleMenu.addEventListener('click', () => {
+    mainNav.classList.toggle('nav--show');
+    mainAdmin.classList.toggle('main-Admin--show');
+});
+
+window.addEventListener('resize', () =>{
+    if(mainNav.classList.contains('nav--show')) {
+        mainNav.classList.remove('nav--show');
+        mainAdmin.classList.remove('menuAdmin--show');
+    }
+});
+
+/* Fin Efecto botones */
