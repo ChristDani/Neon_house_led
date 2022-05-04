@@ -25,7 +25,7 @@
                                 </div>
                                 <div class="form-group col-md-6">
                                 <label class="control-label" >Telefono</label>
-                                <input class="form-control p-2 input-contact bg-transparent rounded w-100 me-1 me-sm-4 my-3 text-white"  minlenght="9" maxlenght="9" type="tel" name="telefono" id="telefono" placeholder="Telefono" >
+                                <input class="form-control p-2 input-contact bg-transparent rounded w-100 me-1 me-sm-4 my-3 text-white"  minlenght="9" maxlenght="9" type="number" name="telefono" id="telefono" placeholder="Telefono" >
                                 </div>
                                 <div class="input-group">
                                 <button type="submit" class="neonbottonlanding btn btn-primary my-sm-3 border-0" style="width: 90%; height:30% font-size: 18px;">Guardar</button>
