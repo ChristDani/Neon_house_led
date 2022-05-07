@@ -2,7 +2,7 @@ $(document).ready(function() {
     datapro();
 });
 function datapro() {
-    console.log("sadasd");
+    console.log("funciona");
     $.ajax({
         url: '/producto/getdata',
         type: 'GET',
@@ -36,27 +36,3 @@ function seleccionarColor2(){
     
   }
 
-function sendCart() 
-{
-    console.log("funciona");
-    $(document).on("click", "#addcart", function (e) 
-    {
-        let selectColor = document.getElementById('selectColor');
-        let color = selectColor.value;
-        const data = { pro_color : color };
-        console.log(data);
-        //tiene que capturar el valor del color
-        $.ajax({
-        url:"/cart/aggCart",
-        data:data,
-        type:'POST',
-            success: function(e)
-            {
-                console.log(e);
-                let json = JSON.parse(e);
-                console.log("ya funciona");
-                window.location.href ="cart"; 
-            }
-        });    
-    })
-}

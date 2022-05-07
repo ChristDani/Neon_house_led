@@ -112,4 +112,5 @@
      
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="build/js/ajax/ajax.findproducto.js"></script>
+    <script src="build/js/ajax/ajax.cart.js"></script>
 </div>
