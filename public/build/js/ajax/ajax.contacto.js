@@ -9,8 +9,9 @@ function enviarEmail(data){
         data:data,
         success: function(e){
             let json = JSON.parse(e);
+            console.log(e);
                 
-            // formContact.reset();
+            formContact1.reset();
 
             if (json.prueba == true){
                 Swal.fire({

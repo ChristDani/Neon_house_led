@@ -77,7 +77,7 @@
                 <div class="container">
                     <div class="row text-white mx-1 mx-sm-5 pt-3 mb-2 d-flex justify-content-end">
                         <div class="formulario col-12 col-sm-12  border neontabla">
-                            <h2 class="display-6 text-center weight-medium" style="margin: 40px;">Aun tienes dudas? <strong> Contáctanos!</strong></h2>
+                            <h2 class="display-6 text-center weight-medium" style="margin: 40px;">¿Aún tiene dudas? <strong> Contáctanos!</strong></h2>
                                 <div class="container">
                                 
                                   
