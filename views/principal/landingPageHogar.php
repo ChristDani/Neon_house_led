@@ -51,8 +51,8 @@
                     <div class="row d-flex justify-content-center">
                             <!-- FORM INHABILITADO PARA HACER PRUEBAS CON EL BOTON SUBMIT, POSTERIORMENTE REMOVER ONSUBMIT-->
 
-                        <form class="formContact landingPageForm col-12 col-sm-10" id="formContact1" method="POST">
-                            <input type="hidden" id="consulta" value="formNegocio"> <!-- a futuro cambiar value a formHogar -->
+                        <form class="formContact landingPageForm col-12 col-sm-10" method="POST">
+                            <input type="hidden" id="consulta" value="formHogar">
                             <div class="modal-field">
                                 <input type="hidden" class="neontextlanding bg-transparent text-center form-control my-3 border-0" name="contador" id="contador" value=1>
                             </div>
@@ -81,22 +81,67 @@
             </div>
             <!--Final Modal-->
 
-
-
-            <div class="row questionNosotros py-2 py-sm-5 d-flex justify-content-center">
-
-                <h2 class="questionNosotrosTitle pt-2 pt-sm-5">¿Por qué trabajar con nosotros?</h2>
-
-                <p class="paragraph mt-3 w-75  px-4 px-sm-5 border border-5 rounded-3">Entendemos la importancia de la decoración en tu negocio para ofrecer el ambiente que tu 
-
-                    cliente merece, con nosotros para lograrlo</p>      
-
+            <div class="row questionNosotros py-2 py-sm-1 d-flex justify-content-center">
+                <h2 class="questionNosotrosTitle pt-2 pt-sm-1">¿Por qué trabajar con nosotros?</h2>
+                <p class="paragraph mt-3 w-75  px-4 px-sm-5 border border-5 rounded-3">Entendemos la importancia de la decoración en tu hogar, te ofreceremos el ambiente que tú 
+                    mereces, con nostros podrás lograrlo.</p>      
             </div>
 
-            <!--LandingPageHogar-->
-            <div class="landin1 arreglo">
 
-                <h1 class="title">¡LOS MEJORES DISEÑOS PARA EL HOGAR!</h1>
+            <!-- Modal Ver Catalogo -->
+
+            <button type="button" id="model-Catalogo" class="neonbottonlanding btn btn-primary my-0 my-sm-3 border-0" data-bs-toggle="modal" data-bs-target="#modalCatalogo" style="width: 30%;">
+                Ver Catálogo
+            </button>
+
+
+                <div class="modal fade" id="modalCatalogo" tabindex="-1">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+
+                            <div class="modal-header text-center">
+                                <h3 class="modal-title neones tex-center">"No te pierdas los Diseños Exclusivos"</h3>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+
+                            <form class="formContact landingPageForm col-sm-12" id="formContact1" method="POST">
+                                <div class="modal-body mx-5">
+                                    <input type="hidden" id="consulta" value="formHogar">
+                                    <div class="modal-field">
+                                        <input type="hidden" class="form-control my-3 border-2" name="contador" id="contador" value=1>
+                                    </div>
+                                    <div class="modal-field">
+                                        <input type="text" class="form-control my-3 border-2" name="nombre" id="nombre" placeholder="Nombres" required>
+                                    </div>
+                                    <div class="modal-field">
+                                        <input type="text" class="form-control my-3 border-2" name="apellido" id="apellidos" placeholder="Apellidos" required>
+                                    </div>
+                                    <div class="modal-field">
+                                        <input type="email" class="form-control my-3 border-2" name="correo" id="correo" placeholder="Correo Electrónico" required>
+                                    </div>
+                                    <div class="modal-field">
+                                        <input type="number" class="form-control my-3 border-1" name="telefono" id="telefono" placeholder="Número de celular" required>
+                                    </div>
+                                    <div class="modal-field">
+                                        <input type="hidden" class="form-control my-3" name="pregunta" id="pregunta" value="Interesado en Hogar">
+                                    </div>
+                                    
+                                    <button type="submit" class="neonbottonlanding btn btn-primary" onclick="verCatalogo();">Enviar y Mostrar</button>
+                                </div>
+                            </form>
+
+                        </div>
+                    </div>
+                </div>
+            
+            <!-- Fin Modal Ver Catalgo -->
+
+
+            
+            <!--LandingPageHogar-->
+            <div class="landin1 arreglo" id="Catalogo">
+
+                <h1 class="title">¡LOS MEJORES DISEÑOS PARA TU HOGAR!</h1>
 
                     <div class="container">
 
@@ -148,7 +193,7 @@
                     </div>
             </div>   
 
-<!--Fin LandinPageHogar-->
+            <!--Fin LandinPageHogar-->
 
 
         <div class="personalizado row d-flex align-items-end ">

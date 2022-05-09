@@ -62,7 +62,12 @@ form{
     padding: 8px 10px;
 }
 
-/* landing*/
+/* landingPage Hogar-Evento-Negocio*/
+
+#Catalogo{
+    display: none;
+}
+
 .landin1 .container{
     width: auto;
     height: auto;
@@ -121,7 +126,10 @@ form{
     font-weight: 100;
     color: rgb(255, 255, 255);
 }
-/*fin landingevento*/
+
+/*fin landingPage*/
+
+
 
 /*Pagina servicios, correccion responsive*/
 @media only screen and (max-width: 1200px) and (min-width: 1025px)  {

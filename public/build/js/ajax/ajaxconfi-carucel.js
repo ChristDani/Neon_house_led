@@ -185,6 +185,33 @@
         capturaDataNegocio();
     }
 
+    
+ /*Mostrar Catalogo Imgs */
+
+    function verCatalogo(){
+        document.getElementById('Catalogo').style.display = 'block';
+        AsesoriaHog();
+        // cambiarHogar();
+        capturaDataHogar();
+    }
+
+    function Evento() {
+        AsesoriaEv() 
+        // cambiarEvento();
+        capturaDataEvento();
+    }
+
+
+
+
+    function Negocio() {
+        AsesoriaNeg()
+        // cambiarNegocio();
+        capturaDataNegocio();
+    }
+
+// Fin Mostrar Catalogo
+
 
 
     
