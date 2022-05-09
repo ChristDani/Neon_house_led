@@ -17,6 +17,13 @@
 			</tr>
 		</thead>
 		<tbody>
+			<tr class="text-center">
+				<th align="center" width="20%" id="id"></th>
+				<th id="nombre"></th>
+				<th id="precio"></th>
+				<th id="selectColor"></th>
+				<th><i class="fa-solid fa-circle-minus"></i></th>
+			</tr>
 		</tbody>
 
 		</table>
