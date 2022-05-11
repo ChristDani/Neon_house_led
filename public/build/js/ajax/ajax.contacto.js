@@ -1,5 +1,6 @@
 $(document).ready(function(){
     saveCorreo();
+    saveCorreoMod();
 });
 
 function enviarEmail(data){
@@ -12,6 +13,7 @@ function enviarEmail(data){
             console.log(e);
                 
             formContact1.reset();
+            
 
             if (json.prueba == true){
                 Swal.fire({
@@ -108,8 +110,6 @@ function saveCorreo(){
 }
 
 
-//RENZO
-
 
 function createContactoVis(data) {
     $.ajax ({
@@ -142,3 +142,38 @@ function enviarEmpresa(data){
       },
     });
   }
+
+// Guarda Datos del Modal VerCatalogo-Landingpage
+
+  function saveCorreoMod(){
+    $(".formContact1").submit(function(e){
+        e.preventDefault();
+        const data = {
+            contador: $("#mod_contador").val().trim(),           
+            nombre: $("#mod_nombre").val().trim(),
+            apellidos: $("#mod_apellidos").val().trim(),
+            correo: $("#mod_correo").val().trim(),
+            telefono: $("#mod_telefono").val().trim(),
+            pregunta: $("#mod_pregunta").val().trim(),
+            consulta: $("#mod_consulta").val().trim()
+        };
+
+        const data2 = { //guarda datos de visitante con correo repetido
+            //id = null,
+            vis_nombre: $("#mod_nombre").val().trim(),
+            vis_apellidos: $("#mod_apellidos").val().trim(),
+            vis_email: $("#mod_correo").val().trim(),
+            vis_telefono: $("#mod_telefono").val().trim(),
+            vis_pregunta: $("#mod_pregunta").val().trim(),
+        };
+        
+        createContactoVis(data2) // esto primero que los correos
+        enviarEmail(data);
+        data.contador=2;
+        console.log(data.contador)
+        enviarEmail2(data);
+        data.contador=3;
+        console.log(data.contador)
+        enviarEmail3(data);
+    });
+}

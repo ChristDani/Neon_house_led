@@ -80,18 +80,65 @@
             <!--Final Modal-->
 
 
-            <div class="row questionNosotros py-2 py-sm-5 d-flex justify-content-center">
-
-                <h2 class="questionNosotrosTitle pt-2 pt-sm-5">¿Por qué trabajar con nosotros?</h2>
-
-                <p class="paragraph mt-3 w-75  px-4 px-sm-5 border border-5 rounded-3">Entendemos la importancia de la decoración en tu negocio para ofrecer el ambiente que tu 
-
-                    cliente merece, con nosotros para lograrlo</p>      
-
+            <div class="row questionNosotros py-2 py-sm-1 d-flex justify-content-center">
+                <h2 class="questionNosotrosTitle pt-2 pt-sm-1">¿Por qué trabajar con nosotros?</h2>
+                <p class="paragraph mt-3 w-75  px-4 px-sm-5 border border-5 rounded-3">"Entendemos la importancia de la decoración en tu negocio 
+                    para ofrecer el ambiente que tu cliente merece, con nosotros para lograrlo"</p> 
             </div>
 
+
+            <!-- Modal Ver Catalogo -->
+
+            <button type="button" id="model-Catalogo" class="neonbottonlanding btn btn-primary my-0 my-sm-3 border-0" data-bs-toggle="modal" data-bs-target="#modalCatalogo" style="width: 30%;">
+                Ver Catálogo
+            </button>
+
+
+                <div class="modal fade" id="modalCatalogo" tabindex="-1" aria-labelledby="modalCatalogo" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content" id="modCatalogo">
+
+                            <div class="modal-header text-center">
+                                <h3 class="modal-title neones tex-center">"No te pierdas los Diseños Exclusivos"</h3>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+
+                            <form class="formContact1 landingPageForm col-sm-12" id="formContact1" method="POST">
+                                <div class="modal-body mx-5">
+                                    <input type="hidden" id="mod_consulta" value="formEvento">
+                                    <div class="modal-field">
+                                        <input type="hidden" class="form-control my-3 border-2" name="contador" id="mod_contador" value=1>
+                                    </div>
+                                    <div class="modal-field">
+                                        <input type="text" class="form-control my-3 border-2" name="nombre" id="mod_nombre" placeholder="Nombres" required>
+                                    </div>
+                                    <div class="modal-field">
+                                        <input type="text" class="form-control my-3 border-2" name="apellido" id="mod_apellidos" placeholder="Apellidos" required>
+                                    </div>
+                                    <div class="modal-field">
+                                        <input type="email" class="form-control my-3 border-2" name="correo" id="mod_correo" placeholder="Correo Electrónico" required>
+                                    </div>
+                                    <div class="modal-field">
+                                        <input type="number" class="form-control my-3 border-1" name="telefono" id="mod_telefono" placeholder="Número de celular" required>
+                                    </div>
+                                    <div class="modal-field">
+                                        <input type="hidden" class="form-control my-3" name="pregunta" id="mod_pregunta" value="Interesado en luces Evento">
+                                    </div>
+                                    
+                                    <button type="submit" id="model-CatalogoE" class="neonbottonlanding btn btn-primary" onclick="verCatalogoE();">Enviar y Mostrar</button>
+                                </div>
+                            </form>
+
+                        </div>
+                    </div>
+                </div>
+            
+            <!-- Fin Modal Ver Catalgo -->
+
+
+
     <!--LandingPageEvento-->
-    <div class="landin1 arreglo">
+    <div class="landin1 arreglo" id="Catalogo">
         <h1 class="title">¡LOS MEJORES DISEÑOS PARA EVENTOS!</h1>
         <div class="container">
             <div class="card">
@@ -153,7 +200,7 @@
     </div>
 
     <div class="row empresasQue py-2 py-sm-5">
-        <h2 class="empresasQueTitle mb-2 mb-sm-5">Empresas que trabajan con nosotros</h2>
+        <h2 class="empresasQueTitle mb-2 mb-sm-5">Empresas que trabajan con nosotros:</h2>
         <div class="col-3 d-none d-sm-block">
             <img class="empresasQueImage mx-auto d-block" src="/build/img/metacolor.webp" alt="logo" loading="lazy">
         </div>

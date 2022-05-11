@@ -575,7 +575,7 @@
     padding-top: 2.5rem;
     background-color: rgb(0, 0, 0);
     text-align: center;
-    overflow: hidden; /*para ocultar el margen en el titulo h1*/
+    overflow: hidden;
 }
 @media screen and (min-width: 768px){ /* 768 para pantalla tablet, para el menu*/
     .mainTitulo{
@@ -593,3 +593,24 @@
 }
 
 /*Fin Cambio Botones Administrar.php*/
+
+
+/* Boton VerCatalogo-Landingpage */
+
+#model-Catalogo:focus,#model-Catalogo:hover{-webkit-animation:model-Catalogo 1.5s;animation:model-Catalogo 1.5s;box-shadow:0 0 0 1.5em rgba(255, 255, 255, 0)}
+
+@keyframes model-Catalogo{0%{box-shadow:0 0 var(--hover)}}
+
+#model-Catalogo{--color:#3592cf;--hover:#3592cf}
+
+#modCatalogo{
+    -webkit-border-radius: 0px;
+    -moz-border-radius: 0px;
+    border-radius: 50px; 
+    background-color:#1e2233;
+	border-left:1px solid #007DCF;
+	border-right:1px solid #007DCF;
+
+} 
+
+/* FinBoton VerCatalogo-Landingpage */

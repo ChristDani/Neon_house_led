@@ -188,25 +188,23 @@
     
  /*Mostrar Catalogo Imgs */
 
-    function verCatalogo(){
+    function verCatalogoH(){
         document.getElementById('Catalogo').style.display = 'block';
         AsesoriaHog();
-        // cambiarHogar();
         capturaDataHogar();
     }
+    
 
-    function Evento() {
+    function verCatalogoE(){
+        document.getElementById('Catalogo').style.display = 'block';
         AsesoriaEv() 
-        // cambiarEvento();
         capturaDataEvento();
     }
 
 
-
-
-    function Negocio() {
+    function verCatalogoN(){
+        document.getElementById('Catalogo').style.display = 'block';
         AsesoriaNeg()
-        // cambiarNegocio();
         capturaDataNegocio();
     }
 

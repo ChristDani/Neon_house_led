@@ -83,8 +83,8 @@
 
             <div class="row questionNosotros py-2 py-sm-1 d-flex justify-content-center">
                 <h2 class="questionNosotrosTitle pt-2 pt-sm-1">¿Por qué trabajar con nosotros?</h2>
-                <p class="paragraph mt-3 w-75  px-4 px-sm-5 border border-5 rounded-3">Entendemos la importancia de la decoración en tu hogar, te ofreceremos el ambiente que tú 
-                    mereces, con nostros podrás lograrlo.</p>      
+                <p class="paragraph mt-3 w-75  px-4 px-sm-5 border border-5 rounded-3">"Entendemos la importancia de la decoración en tus eventos, para ello te ofreceremos el ambiente que tú 
+                    mereces, con nostros podrás lograrlo"</p>      
             </div>
 
 
@@ -95,38 +95,38 @@
             </button>
 
 
-                <div class="modal fade" id="modalCatalogo" tabindex="-1">
+                <div class="modal fade" id="modalCatalogo" tabindex="-1" aria-labelledby="modalCatalogo" aria-hidden="true">
                     <div class="modal-dialog">
-                        <div class="modal-content">
+                        <div class="modal-content" id="modCatalogo">
 
                             <div class="modal-header text-center">
                                 <h3 class="modal-title neones tex-center">"No te pierdas los Diseños Exclusivos"</h3>
                                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                             </div>
 
-                            <form class="formContact landingPageForm col-sm-12" id="formContact1" method="POST">
+                            <form class="formContact1 landingPageForm col-sm-12" id="formContact1" method="POST">
                                 <div class="modal-body mx-5">
-                                    <input type="hidden" id="consulta" value="formHogar">
+                                    <input type="hidden" id="mod_consulta" value="formHogar">
                                     <div class="modal-field">
-                                        <input type="hidden" class="form-control my-3 border-2" name="contador" id="contador" value=1>
+                                        <input type="hidden" class="form-control my-3 border-2" name="contador" id="mod_contador" value=1>
                                     </div>
                                     <div class="modal-field">
-                                        <input type="text" class="form-control my-3 border-2" name="nombre" id="nombre" placeholder="Nombres" required>
+                                        <input type="text" class="form-control my-3 border-2" name="nombre" id="mod_nombre" placeholder="Nombres" required>
                                     </div>
                                     <div class="modal-field">
-                                        <input type="text" class="form-control my-3 border-2" name="apellido" id="apellidos" placeholder="Apellidos" required>
+                                        <input type="text" class="form-control my-3 border-2" name="apellido" id="mod_apellidos" placeholder="Apellidos" required>
                                     </div>
                                     <div class="modal-field">
-                                        <input type="email" class="form-control my-3 border-2" name="correo" id="correo" placeholder="Correo Electrónico" required>
+                                        <input type="email" class="form-control my-3 border-2" name="correo" id="mod_correo" placeholder="Correo Electrónico" required>
                                     </div>
                                     <div class="modal-field">
-                                        <input type="number" class="form-control my-3 border-1" name="telefono" id="telefono" placeholder="Número de celular" required>
+                                        <input type="number" class="form-control my-3 border-1" name="telefono" id="mod_telefono" placeholder="Número de celular" required>
                                     </div>
                                     <div class="modal-field">
-                                        <input type="hidden" class="form-control my-3" name="pregunta" id="pregunta" value="Interesado en Hogar">
+                                        <input type="hidden" class="form-control my-3" name="pregunta" id="mod_pregunta" value="Interesado en luces Hogar">
                                     </div>
                                     
-                                    <button type="submit" class="neonbottonlanding btn btn-primary" onclick="verCatalogo();">Enviar y Mostrar</button>
+                                    <button type="submit" class="neonbottonlanding btn btn-primary" onclick="verCatalogoH();">Enviar y Mostrar</button>
                                 </div>
                             </form>
 
@@ -213,7 +213,7 @@
             </div>
         </div>
         <div class="row empresasQue py-2 py-sm-5">
-            <h2 class="empresasQueTitle mb-2 mb-sm-5">Empresas que trabajan con nosotros</h2>
+            <h2 class="empresasQueTitle mb-2 mb-sm-5">Empresas que trabajan con nosotros: </h2>
             <div class="col-3 d-none d-sm-block">
                 <img class="empresasQueImage mx-auto d-block" src="/build/img/metacolor.webp" alt="logo" loading="lazy">
             </div>
