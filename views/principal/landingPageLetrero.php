@@ -35,7 +35,7 @@
     <!--CENTRADO Y BLANCO-->
     <div class="container-fluid text-white text-center">
         <!--BOTON DEL MODAL-->
-        <button type="button" id="model-register" class="neonbottonlanding btn btn-primary my-0 my-sm-3 border-0" data-bs-toggle="modal" data-bs-target="#modalAsesoria" onclick="AsesoriaHog()">
+        <button type="button" id="model-register" class="neonbottonlanding btn btn-primary my-0 my-sm-3 border-0" data-bs-toggle="modal" data-bs-target="#modalAsesoria" onclick="AsesoriaLet()">
             Obtén una asesoría personalizada GRATIS!
         </button>
 
