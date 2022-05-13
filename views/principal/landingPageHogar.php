@@ -51,7 +51,7 @@
                     <div class="row d-flex justify-content-center">
                             <!-- FORM INHABILITADO PARA HACER PRUEBAS CON EL BOTON SUBMIT, POSTERIORMENTE REMOVER ONSUBMIT-->
 
-                        <form class="formContact landingPageForm col-12 col-sm-10" method="POST">
+                        <form class="formContact landingPageForm col-12 col-sm-10" id="formContact" method="POST">
                             <input type="hidden" id="consulta" value="formHogar">
                             <div class="modal-field">
                                 <input type="hidden" class="neontextlanding bg-transparent text-center form-control my-3 border-0" name="contador" id="contador" value=1>

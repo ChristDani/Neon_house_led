@@ -27,6 +27,10 @@ class PrincipalController {
         $router->renderPrincipal('landingPageHogar',[]);
     }
 
+    public static function landingLetrero(Router $router){
+        $router->renderPrincipal('landingPageLetrero',[]);
+    }
+
     public static function nosotros(Router $router){
         $router->renderPrincipal('nosotros',[]);
     }

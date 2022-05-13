@@ -182,6 +182,7 @@ $router = new Router();
         $router->get("/landingPageNegocio", [PrincipalController::class, 'landingNegocio']);
         $router->get("/landingPageEvento", [PrincipalController::class, 'landingEvento']);
         $router->get("/landingPageHogar", [PrincipalController::class, 'landingHogar']);
+        $router->get("/landingPageLetrero", [PrincipalController::class, 'landingLetrero']);
         $router->get("/RegistroCliente", [PrincipalController::class, 'regCliente']);
         $router->get("/ProductoDetallado", [PrincipalController::class, 'proDetallado']);
         $router->get("/administrar", [PrincipalController::class, 'administrar']);

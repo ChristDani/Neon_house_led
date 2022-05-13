@@ -110,7 +110,43 @@
 
             clickNegocio="img1";
         } 
-    } 
+    }
+
+    //Evento Click carrucel Negocio
+    var clickLetrero="img1";
+
+    function AsesoriaLet(){      
+        var imagen=document.getElementById("imgCarrusLetrero1");
+        var imagen2=document.getElementById("imgCarrusLetrero2");
+        var imagen3=document.getElementById("imgCarrusLetrero3");
+
+        if (clickNegocio=="img1") {
+            imagen.src="/build/img/landingPage/lp-letrero/l1.webp";
+            
+            imagen2.src="/build/img/landingPage/lp-letrero/l2.webp";
+
+            imagen3.src="/build/img/landingPage/lp-letrero/l3.webp";
+            
+            clickNegocio="img2";
+        } else if(clickNegocio=="img2"){
+            imagen.src="/build/img/landingPage/lp-letrero/l4.webp";
+
+            imagen2.src="/build/img/landingPage/lp-letrero/l5.webp";
+
+            imagen3.src="/build/img/landingPage/lp-letrero/l6.webp";
+
+            clickNegocio="img3";
+
+        } else {
+            imagen.src="/build/img/landingPage/lp-letrero/l4.webp";
+
+            imagen2.src="/build/img/landingPage/lp-letrero/l3.webp";
+
+            imagen3.src="/build/img/landingPage/lp-letrero/l2.webp";
+
+            clickNegocio="img1";
+        } 
+    }
     
     // Swift de los formularios 
     // caputra de data Evento
@@ -128,6 +164,10 @@
             swal('Listo!','Datos enviados correctamente','success');
             console.log("entrando a mostrar");
         }*/
+
+        //Cierre del modal despues del guardado de datos
+        var $modalCat = $('#modalCatalogo');
+        $modalCat.modal('hide');
         
     }
     
@@ -146,6 +186,11 @@
             swal('Listo!','Datos enviados correctamente','success');
             console.log("entrando a mostrar");
         }*/
+
+        //Cierre del modal despues del guardado de datos
+        var $modalCat = $('#modalCatalogo');
+        $modalCat.modal('hide');
+
     }
 
     // caputra de data Negocio
@@ -163,6 +208,32 @@
             swal('Listo!','Datos enviados correctamente','success');
             console.log("entrando a mostrar");
         }*/
+
+        //Cierre del modal despues del guardado de datos
+        var $modalCat = $('#modalCatalogo');
+        $modalCat.modal('hide');
+        
+    }
+
+    // caputra de data Letrero
+
+    function capturaDataLetrero() {
+        var nombre=document.getElementById("nombre").value;
+        var apellidos=document.getElementById("apellidos").value;
+        var correo=document.getElementById("correo").value;
+        var telefono=document.getElementById("telefono").value;
+        
+        /*if (nombre=="" || apellidos=="" || correo=="" || telefono=="") {
+            swal('Error','Datos por completar','error');
+            console.log("error a mostrar");
+        } else {
+            swal('Listo!','Datos enviados correctamente','success');
+            console.log("entrando a mostrar");
+        }*/
+
+        //Cierre del modal despues del guardado de datos
+        var $modalCat = $('#modalCatalogo');
+        $modalCat.modal('hide');        
         
     }
 
@@ -183,6 +254,12 @@
         AsesoriaNeg()
         // cambiarNegocio();
         capturaDataNegocio();
+    }
+
+    function Letrero() {
+        AsesoriaLet()
+        // cambiarLetrero();
+        capturaDataLetrero();
     }
 
     
@@ -206,6 +283,13 @@
         document.getElementById('Catalogo').style.display = 'block';
         AsesoriaNeg()
         capturaDataNegocio();
+    }
+
+
+    function verCatalogoL(){
+        document.getElementById('Catalogo').style.display = 'block';
+        AsesoriaLet()
+        capturaDataLetrero();
     }
 
 // Fin Mostrar Catalogo

@@ -12,7 +12,7 @@ function enviarEmail(data){
             let json = JSON.parse(e);
             console.log(e);
                 
-            formContact1.reset();
+            formContact1.reset(); //Limpia el form ver catalogo
             
 
             if (json.prueba == true){
@@ -25,6 +25,7 @@ function enviarEmail(data){
                     timer: 2500,
                     footer: '¡Revise su correo!'          
                 })
+                formContact.reset(); //Limpia el form pedir asesoria
             } else {
                 Swal.fire({
                         icon: 'error',

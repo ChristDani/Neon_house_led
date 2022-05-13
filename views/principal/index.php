@@ -145,7 +145,7 @@
 
                     </div>
                     <div class="pt-3 pb-3">
-                    <a href="#" class="btnmorado weight-bolder text-white bg-primary-button"  style="width: 100%; font-size: larger;">Ver Diseños</a>
+                    <a href="/landingPageLetrero" class="btnmorado weight-bolder text-white bg-primary-button"  style="width: 100%; font-size: larger;">Ver Diseños</a>
                     </div>
                 </div>
                         
