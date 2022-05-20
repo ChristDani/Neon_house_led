@@ -1,3 +1,32 @@
+<?php 
+
+	$signo='<i class="fa-solid fa-circle-minus"></i>';
+	$listCart=null;
+
+	if($listCart!=null)
+		{ 
+
+			$list=null;
+			$id='<label id="id"></label>';
+			$nombre='<label id="nombre"></label>';
+			$precio='<label id="precio"></label>';
+			$list=array($id,$nombre,$precio);
+			array_push($listCart, $list);
+
+		}
+	else
+		{
+
+			$id='<label id="id"></label>';
+			$nombre='<label id="nombre"></label>';
+			$precio='<label id="precio"></label>';
+
+			$listCart[]=array($id,$nombre,$precio);
+
+		}
+
+?>
+
 <section class="bg-black pt-5 pb-5 text-white">
 <div class="content-principal container mt-20">
 
@@ -17,13 +46,21 @@
 			</tr>
 		</thead>
 		<tbody>
-			<tr class="text-center">
-				<th align="center" width="20%" id="id"></th>
-				<th id="nombre"></th>
-				<th id="precio"></th>
-				<th id="color"></th>
-				<th><i class="fa-solid fa-circle-minus"></i></th>
-			</tr>
+			<?php
+				if ($listCart != null) 
+				{
+					foreach ($listCart as $cart) 
+					{
+						echo "<tr class='text-center'>";
+						echo "<th>$cart[0]</th>";
+						echo "<th>$cart[1]</th>";
+						echo "<th>$cart[2]</th>";
+						echo "<th></th>";
+						echo "<th>$signo</th>";
+						echo "</tr>";
+					}
+				}
+			?>
 		</tbody>
 
 		</table>
