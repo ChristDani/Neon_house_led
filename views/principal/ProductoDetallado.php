@@ -56,29 +56,14 @@
                         <input type="hidden" id="id" value="formNegocio">
 
                             <div style="float: left;"class="modal-field">
-                                <label id="precio" type="text" id="pro_precio" class="font-weight-bold text-white bg-transparent text-left form-control border-0"></label> 
-                                <span id="lblColorSeleccionado" style="color: #FCE367; font-weight: bolder;"></span>                     
-                                <label id="tamano" type="text" id="pro_tamano" class="font-weight-bold text-white bg-transparent text-left form-control border-0"></label>                              
+                                <label id="precio" type="text" id="pro_precio" class="font-weight-bold text-white bg-transparent text-left form-control border-0"></label>                      
+                                <label id="tamano" type="text" id="pro_tamano" class="font-weight-bold text-white bg-transparent text-left form-control border-0"></label>
+                                <label id="color" type="text" id="pro_color" class="font-weight-bold text-white bg-transparent text-left form-control border-0"></label>
                              
                             </div>
                                 
                             <br>
                                 
-                            
-                            
-                            <select id="selectColor" name="color" onchange="seleccionarColor2();" class="neontextlanding border-0 border bg-transparent rounded w-100 me-1 me-sm-4 my-3 d-block">
-                                    <option id="proRojo" value="ROJO">ROJO</option>
-                                    <option id="proAzul" value="AZUL">AZUL</option>
-                                    <option id="proAmari" value="AMARILLO">AMARILLO</option>
-                                    <option id="proAnara" value="ANARANJADO">ANARANJADO</option>
-                                    <option id="proCele" value="CELESTE">CELESTE</option>
-                                    <option id="proFuc" value="FUCSIA">FUCSIA</option>
-                                    <option id="proRosa" value="ROSADO">ROSADO</option>
-                                    <option id="proMora" value="MORADO">MORADO</option>
-                                    <option id="proBla" value="BLANCO">BLANCO</option>
-                                    <option id="proMulti" value="MULTICOLOR">MULTICOLOR</option>
-
-                                </select> 
                                 
                                 <div class="pt-3 pb-3">
                                 <i class="fa-solid fa-dolly"></i><a onclick="sendCart(), window.location.href='/cart'" class="neonbottonlanding btn btn-primary my-sm-3 border-0" style="width: auto; height:auto font-size: 18px;" id="productodet"> Comprar </a>

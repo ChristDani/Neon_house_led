@@ -16,6 +16,7 @@ function datapro() {
                 $('#precio').append("Precio: S/.",data.pro_precio);
                 $('#detalles').text(data.pro_descripcion);
                 $('#tamano').append("Dimensiones: ",data.pro_tamano);
+                $('#color').append("Color: ",data.pro_color);
             });
         }   
     });
@@ -31,7 +32,7 @@ function seleccionarColor2(){
       document.getElementById('lblColorSeleccionado').innerHTML = `<i class="fa-solid fa-tags"></i> Precio Multicolor: S/.${precioMulti}`;
     }
     else{
-      document.getElementById('lblColorSeleccionado').innerHTML = ``;
+      document.getElementById('lblColorSeleccionado').innerHTML = $color;
     }
     
   }

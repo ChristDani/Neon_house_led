@@ -19,6 +19,7 @@
                     <th>Precio Multicolor </th>
                     <th>Tamaño </th>
                     <th>Estado </th>
+                    <th>Color </th>
                     <th>Imagen1 </th>
                     <th>Imagen2 </th>
                     <th>Imagen3 </th>
@@ -41,7 +42,7 @@
             </div>
             <div class="modal-body">
                 <!--El enctype multipart es importante para poder trabajar con imaenes-->
-                <form action="../controllers/AggProducto.php" method="POST" enctype="multipart/form-data" class="color-dark">
+                <form id="formProducto" enctype="multipart/form-data" class="color-dark">
                     <input type="hidden" id="id">
                     <div class="mb-3">
                         <label for="pro_categoria">Categoría:</label>
@@ -56,6 +57,10 @@
                     <div class="mb-3">
                         <label for="">Descripcion:</label>
                         <textarea id="pro_descripcion" class="form-control" cols="30" rows="10"></textarea>
+                    </div>
+                    <div class="mb-3">
+                        <label for="">Color:</label>
+                        <input type="text" id="pro_color" class="form-control" step="0.05">
                     </div>
                     <div class="mb-3">
                         <label for="">Precio:</label>

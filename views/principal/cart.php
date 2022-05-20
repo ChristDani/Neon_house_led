@@ -21,7 +21,7 @@
 				<th align="center" width="20%" id="id"></th>
 				<th id="nombre"></th>
 				<th id="precio"></th>
-				<th id="selectColor"></th>
+				<th id="color"></th>
 				<th><i class="fa-solid fa-circle-minus"></i></th>
 			</tr>
 		</tbody>

@@ -37,6 +37,7 @@ function tableAll() {
           }" id="btnEstado">${data.pro_activo}</button>`;
         },
       },
+      { data: "pro_color"},
       { data: "pro_imagen1"}, //aqui la imagen esta blob
       { data: "pro_imagen2"}, //aqui la imagen
       { data: "pro_imagen3"}, //aqui la imagen
@@ -73,6 +74,7 @@ function obtenerData() {
         console.log(data.cat_id);
         $("#pro_nombre").val(data.pro_nombre);
         $("#pro_descripcion").val(data.pro_descripcion);
+        $("#pro_color").val(data.pro_color);
         $("#pro_precio").val(data.pro_precio);
         $("#pro_precioMulti").val(data.pro_precioMulti);
         $("#pro_activo").val(data.pro_activo);
@@ -121,6 +123,7 @@ function clean() {
   $("#pro_categoria").val("");
   $("#pro_nombre").val("");
   $("#pro_descripcion").val("");
+  $("#pro_color").val("");
   $("#pro_precio").val("");
   $("#pro_precioMulti").val("");
   
@@ -168,12 +171,13 @@ function saveProduct() {
     const categoria = $("#pro_categoria").val();
     const nombre = $("#pro_nombre").val().trim();
     const descripcion = $("#pro_descripcion").val().trim();
+    const color = $("#pro_color").val().trim();
     const precio = $("#pro_precio").val().trim();
     const precioMulti = $("#pro_precioMulti").val().trim();
     //imagenes, aun no terminado
-    const imagen1 = $_FILES["#pro_imagen1"]['name'];
-    const dirfinal1 = "../../img/".imagen1;
-    copy($_FILES['#pro_imagen1']['tmp_name'],dirfinal1);
+                  // const imagen1 = $_FILES["#pro_imagen1"]['name'];
+                  // const dirfinal1 = "../../img/".imagen1;
+                  // copy($_FILES['#pro_imagen1']['tmp_name'],dirfinal1);
     //const imagen2 = $("#pro_imagen2")[0].files[0];
     //const imagen3 = $("#pro_imagen3")[0].files[0];
     //guardando dimensiones
@@ -182,24 +186,38 @@ function saveProduct() {
     const tamano = tm1 + "x" + tm2;
     const estado = $("#pro_activo").val();
 
-    const formData = new FormData();
-    formData.append("pro_categoria", categoria);
-    formData.append("pro_nombre", nombre);
-    formData.append("pro_descripcion", descripcion);
-    formData.append("pro_precio", precio);
-    formData.append("pro_precioMulti", precioMulti);
-    formData.append("pro_imagen1", imagen1);
-    //formData.append("pro_imagen2", imagen2);
-    //formData.append("pro_imagen3", imagen3);
-    formData.append("pro_tamano", tamano);
-    formData.append("pro_activo", estado);
+    const formData = {
+      id: id,
+      cat_id: categoria,
+      pro_nombre: nombre,
+      pro_descripcion: descripcion,
+      pro_color: color,
+      pro_precio: precio,
+      pro_precioMulti: precioMulti,
+      pro_tamano: tamano,
+      pro_activo: estado
+    };
+
+    // const formData = new formData();
+    // formData.append("pro_categoria", categoria);
+    // formData.append("pro_nombre", nombre);
+    // formData.append("pro_descripcion", descripcion);
+    // formData.append("pro_color", color);
+    // formData.append("pro_precio", precio);
+    // formData.append("pro_precioMulti", precioMulti);
+                            // formData.append("pro_imagen1", imagen1);
+              //formData.append("pro_imagen2", imagen2);
+              //formData.append("pro_imagen3", imagen3);
+    // formData.append("pro_tamano", tamano);
+    // formData.append("pro_activo", estado);
 
     if (id == "") {
       if (
-        imagen == undefined ||
+        // imagen == undefined ||
         estado == "" ||
         categoria == "" ||
         nombre == "" ||
+        color == "" ||
         precio == "" ||
         precioMulti == "" ||
         tm1 == "" ||
@@ -221,46 +239,99 @@ function saveProduct() {
   });
 }
 
-function create(formData) {
-  $.ajax({
-    url: "/producto/crear",
-    type: "POST",
-    data: formData,
-    processData: false, // tell jQuery not to process the data
-    contentType: false,
-    success: function (e) {
-      $("#modalProducto").modal("hide");
-      tableAll();
-      swal({
-        title: "Registro Exitoso",
-        icon: "success",
-      });
-    },
-  });
-}
+// function create(formData) {
+//   $.ajax({
+//     url: "/producto/crear",
+//     type: "POST",
+//     data: formData,
+//     processData: false, tell jQuery not to process the data
+//     contentType: false,
+//     success: function (e) {
+//       $("#modalProducto").modal("hide");
+//       tableAll();
+//       swal({
+//         title: "Registro Exitoso",
+//         icon: "success",
+//       });
+//     },
+//   });
+// }
 
-function update(formData) {
-  $.ajax({
-    url: "/producto/editar",
-    type: "POST",
+
+function create(formData) {
+  $.ajax ({
+    url: "producto/create",
     data: formData,
-    processData: false, // tell jQuery not to process the data
-    contentType: false,
-    success: function (e) {
-      console.log(e);
-      const json = JSON.parse(e);
-      const resp = json.res;
-      if (resp) {
-        $("#modalProducto").modal("hide");
-        tableAll();
-        swal({
-          title: "Editado correctamente",
-          icon: "success",
-        });
+    type: "POST",
+    success: function(e) {
+      let json = JSON.parse(e);
+      switch (json.STATUS) {
+        case 1:
+          tableAll();
+          $("#modalProducto").modal("hide");
+          swal({
+            title: json.mensaje,
+            icon: "success",
+          });
+          break;         
+        case 2:
+          swal({
+            title: json.mensaje,
+            icon: "error",
+          });
+          break;
       }
     },
   });
 }
+
+
+
+// function update(formData) {
+//   $.ajax({
+//     url: "/producto/editar",
+//     type: "POST",
+//     data: formData,
+//     // processData: false, tell jQuery not to process the data
+//     // contentType: false,
+//     success: function (e) {
+//       console.log(e);
+//       const json = JSON.parse(e);
+//       const resp = json.res;
+//       if (resp) {
+//         $("#modalProducto").modal("hide");
+//         tableAll();
+//         swal({
+//           title: "Editado correctamente",
+//           icon: "success",
+//         });
+//       }
+//     },
+//   });
+// }
+
+
+function update(formData) {
+  let data2 = formData;
+  console.log(typeof data2);
+  console.log(data2);
+  $.ajax ({
+    url: "producto/update",
+    type: "POST",
+    data: data2,
+    success: function(e) {
+      $('#modalProducto').modal('hide');
+      tableAll();
+      swal({
+        title: "Editado Correctamente",
+        icon: "success"
+      });
+    }
+
+  });
+}
+
+
 
 function updateStatus() {
   $(document).on("click", "#btnEstado", function (e) {

@@ -28,6 +28,7 @@ function sendCart()
                 $('#id').text(data.id);
                 $('#nombre').text(data.pro_nombre);
                 $('#precio').append("S/.",data.pro_precio);
+                $('#color').append(data.pro_color);
                 $('#precioMulti').append("S/.",data.pro_precioMulti);
                 $('#detalles').text(data.pro_descripcion);
                 $('#tamano').append("Dimensiones: ",data.pro_tamano);

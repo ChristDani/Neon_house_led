@@ -125,17 +125,12 @@
                                 <label type="text" id="pro_tamano" class="font-weight-bold text-white bg-transparent text-center form-control my-3 border-0"></label>
                             </div>
                             
+                            <!-- <div class="modal-field">
+                                <label type="text" id="pro_color" class="font-weight-bold text-white bg-transparent text-center form-control my-3 border-0"></label>
+                            </div> -->
                             
                             <select id="selectColor" name="color" onchange="seleccionarColor();" class="neontextlanding border-0 border bg-transparent rounded w-100 me-1 me-sm-4 my-3 d-block">
-                                <option id="proRojo" value="ROJO">ROJO</option>
-                                <option id="proAzul" value="AZUL">AZUL</option>
-                                <option id="proAmari" value="AMARILLO">AMARILLO</option>
-                                <option id="proAnara" value="ANARANJADO">ANARANJADO</option>
-                                <option id="proCele" value="CELESTE">CELESTE</option>
-                                <option id="proFuc" value="FUCSIA">FUCSIA</option>
-                                <option id="proRosa" value="ROSADO">ROSADO</option>
-                                <option id="proMora" value="MORADO">MORADO</option>
-                                <option id="proBla" value="BLANCO">BLANCO</option>
+                                <option id="pro_color" value="${pro_color}">${pro_color}</option>
                                 <option id="proMulti" value="MULTICOLOR">MULTICOLOR</option>
                             </select>         
                             <div class="pt-3 pb-3">

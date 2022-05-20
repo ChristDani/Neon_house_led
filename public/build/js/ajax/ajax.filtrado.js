@@ -12,6 +12,7 @@ function clean() {
   $("#pro_precio").val("");
   $("#pro_tamano").val("");
   $("#pro_nombre").val("");
+  $("#pro_color").val("");
 }
 
 function getCategoria() {
@@ -51,7 +52,7 @@ function getProducto() {
       const lists = json.listPro;
       console.log(lists)
       lists.forEach((list) => {
-        const { id, cat_id, pro_nombre, pro_imagen, pro_activo, pro_precio, pro_tamano} = list;
+        const { id, cat_id, pro_nombre, pro_imagen, pro_activo, pro_precio, pro_tamano, pro_color} = list;
         if (pro_activo == 1) {
           select.innerHTML +=  // IMPRIME EL BOTON //EXTENDER Y SACAR FONDO NEGRO // ID EN IMAGEN //texto borrar
           `         
@@ -89,6 +90,7 @@ function obtenerProducto() {
         document.getElementById("pro_precio").innerHTML = "Precio: S/."+data.pro_precio;
         document.getElementById("pro_tamano").innerHTML = data.pro_tamano;
         document.getElementById("pro_nombre").innerHTML = data.pro_nombre;
+        document.getElementById("pro_color").innerHTML = data.pro_color;
       },
     });
   });
@@ -137,7 +139,7 @@ console.log(precioMulti);
     document.getElementById('lblColorSeleccionado').innerHTML = `<i class="fa-solid fa-tags"></i> Precio Multicolor: S/.${precioMulti}`;
   }
   else{
-    document.getElementById('lblColorSeleccionado').innerHTML = ``;
+    document.getElementById('lblColorSeleccionado').innerHTML = $color;
   }
   
 }

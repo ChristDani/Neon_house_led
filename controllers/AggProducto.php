@@ -1,5 +1,4 @@
-<?php
-include "../conexion.php";
+<!-- include "../conexion.php";
 
 $cn=conexionDB();
 
@@ -11,6 +10,7 @@ use MVC\Router;
 $categoria=$_POST['pro_categoria'];
 $nombre=$_POST['pro_nombre'];
 $descripcion=$_POST['pro_descripcion'];
+$color=$_POST['pro_color'];
 $precio=$_POST['pro_precio'];
 
 $alto=$_POST['t-1'];

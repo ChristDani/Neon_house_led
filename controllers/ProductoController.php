@@ -43,30 +43,49 @@ class ProductoController
         ]);
     }
 
-    public static function guardar()
+    public static function create(Router $router)
     {
         if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             $producto = new Producto($_POST);
-            $nombreImg = md5(uniqid(rand(), true)) . ".webp";
+            // $nombreImg = md5(uniqid(rand(), true)) . ".webp";
 
-            if ($_FILES['pro_imagen']['tmp_name']) {
-                $image = Image::make($_FILES['pro_imagen']['tmp_name'])->fit(800, 600);
-                $producto->setImagen($nombreImg);
-            }
+            // if ($_FILES['pro_imagen']['tmp_name']) {
+            //     $image = Image::make($_FILES['pro_imagen']['tmp_name'])->fit(800, 600);
+            //     $producto->setImagen($nombreImg);
+            // }
 
-            if (!is_dir(CARPETA_IMAGENES)) {
-                mkdir(CARPETA_IMAGENES);
-            }
+            // if (!is_dir(CARPETA_IMAGENES)) {
+            //     mkdir(CARPETA_IMAGENES);
+            // }
 
             $resultado = $producto->crear();
 
-            if ($resultado) {
-                $image->save(CARPETA_IMAGENES . $nombreImg);
+
+            if($resultado) {
+                $listado = Producto::listar();
+                $json = json_encode([
+                    "STATUS"=>1,
+                    "mensaje"=>"Producto Agregado",
+                    "listas"=>$listado,
+                    "p"=>$producto
+                ]);
+            }  else {
+                $json = json_encode([
+                    "STATUS"=>2,
+                    "mensaje"=>"Error al registrar producto",
+                    "p"=>$producto,
+                    "b"=>$resultado
+                ]);
             }
 
-            echo json_encode([
-                "resp" => $resultado
-            ]);
+            // if ($resultado) {
+            //     $image->save(CARPETA_IMAGENES . $nombreImg);
+            // }
+
+            // echo json_encode([
+            //     "resp" => $resultado
+            // ]);
+            echo $json;
         }
     }
 
@@ -93,6 +112,43 @@ class ProductoController
             ]);
         }
     }
+
+    // public static function create(Router $router){
+    //     if($_SERVER["REQUEST_METHOD"] == "POST"){
+    //         $_POST['cli_clave'] = password_hash($_POST['cli_clave'], PASSWORD_DEFAULT);
+    //         $cliente = new Cliente($_POST);
+    //         $verificarCorreo = $cliente->verificarCorreo();
+    //         if ($verificarCorreo->num_rows == 0) {
+    //             $resultado = $cliente->crear(); 
+                
+    //             if($resultado) {
+    //                 $listado = Cliente::listar();
+    //                 $json = json_encode([
+    //                     "STATUS"=>1,
+    //                     "mensaje"=>"Registro Agregado",
+    //                     "listas"=>$listado,
+    //                     "c"=>$cliente
+    //                 ]);
+    //             }  else {
+    //                 $json = json_encode([
+    //                     "STATUS"=>2,
+    //                     "mensaje"=>"Error al registrar",
+    //                     "c"=>$cliente,
+    //                     "b"=>$resultado,
+    //                 ]);
+    //             } // habria un tercer caso con no se puede borrar padres
+    //         }
+    //         //ya existe
+    //         else {
+    //             $json = json_encode ([
+    //                 "STATUS"=>2,
+    //                 "mensaje"=>"Este correo ya existe!!!",
+    //                 "c"=>$cliente
+    //             ]);   
+    //         }
+    //         echo $json;
+    //     }
+    // }
 
     public static function actualizar()
     {

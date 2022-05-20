@@ -7,12 +7,14 @@ use Model\ActiveRecord;
 class Producto  extends ActiveRecord
 {
     protected static $tabla = 'tab_producto';
-    protected static $columnaDB = ['id', 'cat_id', 'pro_nombre', 'pro_descripcion', 'pro_precio', 'pro_precioMulti' , 'pro_tamano', 'pro_activo', 'pro_imagen1', 'pro_imagen2', 'pro_imagen3'];
+    protected static $columnaDB = ['id', 'cat_id', 'pro_nombre', 'pro_descripcion', 'pro_color', 'pro_precio', 'pro_precioMulti' , 'pro_tamano', 'pro_activo', 'pro_imagen1', 'pro_imagen2', 'pro_imagen3'];
+    //protected static $columnaDB = ['id', 'cat_id', 'pro_nombre', 'pro_descripcion', 'pro_color', 'pro_precio', 'pro_precioMulti' , 'pro_tamano', 'pro_activo'];
 
     public $id; 
     public $cat_id;
     public $pro_nombre;
     public $pro_descripcion;
+    public $pro_color;
     public $pro_precio;
     public $pro_precioMulti;
     public $pro_tamano;
@@ -27,6 +29,7 @@ class Producto  extends ActiveRecord
         $this->cat_id = $args['cat_id'] ?? null;
         $this->pro_nombre = $args['pro_nombre'] ?? null;
         $this->pro_descripcion = $args['pro_descripcion'] ?? null;
+        $this->pro_color = $args['pro_color'] ?? null;
         $this->pro_precio = $args['pro_precio'] ?? null;
         $this->pro_precioMulti = $args['pro_precioMulti'] ?? null;
         $this->pro_tamano = $args['pro_tamano'] ?? null;
@@ -39,7 +42,7 @@ class Producto  extends ActiveRecord
     public static function listarCatXProd()
     {
         $query =
-        "SELECT p.id, p.pro_nombre, p.pro_descripcion, p.pro_precio, p.pro_precioMulti, p.pro_tamano, p.pro_activo, p.pro_imagen1, p.pro_imagen2, p.pro_imagen3, c.cat_nombre AS cat_id 
+        "SELECT p.id, p.pro_nombre, p.pro_descripcion, p.pro_color, p.pro_precio, p.pro_precioMulti, p.pro_tamano, p.pro_activo, p.pro_imagen1, p.pro_imagen2, p.pro_imagen3, c.cat_nombre AS cat_id 
         FROM tab_producto AS p INNER JOIN tab_categoria AS c 
         ON p.cat_id = c.id";
 
