@@ -16,8 +16,13 @@
                 </div>
             </div>
     </div>
+    
     <div class="container bg-black text-white" style="width: 100%; height: 80%;">
+        
             <h1 class="display-2 weight-medium">Preguntas Frecuentes</h1>
+
+           
+        
             <h2 class="display-4 weight-medium">Pregunta 1 : <strong>Lorem ipsum dolor sit amet?</strong></h2>
                 <p>
                 Lorem ipsum dolor sur tristique, ipsum nisl mattis lacus, <strong>uis ultricies ex orci a nunc. Etiam nec lobortis</strong> q risus, ac laoreet risus. Vivamus ultrices fermentum nulla, quis ornare nisi sodales eu. <strong>bh est, sed iaculis augue </strong> Etiam eleifend nisuscipit vel. Pellentesque vulputate, nunc non volutpat euismod,
@@ -29,6 +34,7 @@
                 <p>
                 sodales eu. Etiam eleifend nibh est, sed iaculis augue suscipit vel. Pellentesque vulputate, nunc non volutpat euismod, diam tortor pharetra nisi, pulvinar ullamcorper urna risus at nisl. Donec eget quam nisl. Donec in magna eget mauris euismod elementum sit amet vel nisl.
                 </p>
+        
     </div>
     <div class="container bg-black text-white text-end" style="width: 100%; height: 80%;">
             <h2 class="display-4 weight-medium">Pregunta 2: <strong>Lorem ipsum dolor sit amet?</strong></h2>
@@ -69,6 +75,123 @@
                 sodales eu. Etiam eleifend nibh est, sed iaculis augue suscipit vel. Pellentesque vulputate, nunc non volutpat euismod, diam tortor pharetra nisi, pulvinar ullamcorper urna risus at nisl. Donec eget quam nisl. Donec in magna eget mauris euismod elementum sit amet vel nisl.
                 </p>
     </div>
+
+    <!-- INICIO CAMBIO -->
+    <section id="faqs">
+        <div class="container">
+            <div class="row pb-5"> 
+            <div class="container">
+                <div class="row mx-1 mx-sm-5 pt-3 mb-2 d-flex justify-content-end">
+                    
+                     <!-- Pregunta mia -->
+<div class="accordion mt-5" id="accordionExample">
+    <!-- Pregunta1 -->
+
+        
+        
+    </section>
+    <!-- FIN CAMBIO -->
+
+    <!-- Prueba cambio -->
+    <div class="container">
+        <section class="row pb-5">
+            
+            <div class="container">
+                <div class="row text-white mx-1 mx-sm-5 pt-3 mb-2 d-flex justify-content-end" >
+                    <div class="col-lg-5  justify-content-center" style="cursor:pointer">
+                    <h2 class="clearfix mb-0">
+                        <a data-toggle="collapse" data-target="#collapseOne" aria-expanded="true"
+                            aria-controls="collapseOne" > <h2 class="display-8 weight-medium text-white">Pregunta 1 : <strong>Lorem ipsum dolor sit amet? <span><i class="fa fa-angle-down"> </i></span> </strong></h2> </a>
+                    </h2>
+                            <div class="container">
+                                           <!-- contenido de pregunta 1 -->
+                                           <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
+                                                <div class="card-body lead bg-dark text-justify text-white">Lorem ipsum dolor sur tristique, ipsum nisl mattis lacus, uis ultricies ex orci a nunc. nisi, pulvinar ullamcorper urna risus at nisl.
+                                                </div>
+                                
+                                            </div>
+                                           
+                            </div>
+                    </div>
+                                
+                    <div class="col-lg-2  rellenocontact">
+                        <h2 class= "neones">relleno</h2>
+                    </div>
+
+                    <div class="col-lg-5 " style="cursor:pointer">
+                    <h2 class="clearfix mb-0">
+                        <a data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true"
+                        aria-controls="collapseTwo" > <h2 class="display-8 weight-medium text-white">Pregunta 2 : <strong>Lorem ipsum dolor sit amet? <span><i class="fa fa-angle-down"> </i></span> </strong></h2> </a>
+                    </h2>
+                        <div class="container">
+                            <!-- Contenido de pregunta 2 -->
+                            <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
+                                <div class="card-body lead bg-dark text-justify text-white">Lorem ipsum dolor sur tristique, ipsum nisl mattis lacus, uis ultricies ex orci a nunc. Etiam nec lobortis q risus, ac laoreet risus.  
+                                </div>
+                
+                            </div>
+                                   
+                                
+                        </div>
+                    </div>
+                </div>
+            </div>
+           
+        </section>
+    </div>
+
+
+    <!-- fin prueba cambio -->
+    <!-- Prueba cambio 3-->
+    <div class="container">
+        <section class="row pb-5">
+            
+            <div class="container">
+                <div class="row text-white mx-1 mx-sm-5 pt-3 mb-2 d-flex justify-content-end">
+                    <div class="col-lg-5  justify-content-center" style="cursor:pointer">
+                    <h2 class="clearfix mb-0">
+                        <a data-toggle="collapse" data-target="#collapse3" aria-expanded="true"
+                            aria-controls="collapse3" > <h2 class="display-8 weight-medium text-white">Pregunta 3 : <strong>Lorem ipsum dolor sit amet? <span><i class="fa fa-angle-down"> </i></span> </strong></h2> </a>
+                    </h2>
+                            <div class="container">
+                                           <!-- contenido de pregunta 3 -->
+                                           <div id="collapse3" class="collapse" aria-labelledby="heading3" data-parent="#accordionExample">
+                                                <div class="card-body lead bg-dark text-justify text-white">Lorem ipsum dolor sur tristique, ipsum nisl mattis lacus, uis ultricies ex orci a nunc. Etiam nec lobortis q risus, ac laoreet risus. 
+                                                </div>
+                                
+                                            </div>
+                                           
+                            </div>
+                    </div>
+                                
+                    <div class="col-lg-2  rellenocontact">
+                        <h2 class= "neones">relleno</h2>
+                    </div>
+
+                    <div class="col-lg-5 " style="cursor:pointer">
+                    <h2 class="clearfix mb-0">
+                        <a data-toggle="collapse" data-target="#collapse4" aria-expanded="true"
+                        aria-controls="collapse4" > <h2 class="display-8 weight-medium text-white">Pregunta 4 : <strong>Lorem ipsum dolor sit amet? <span><i class="fa fa-angle-down"> </i></span> </strong></h2> </a>
+                    </h2>
+                        <div class="container">
+                            <!-- Contenido de pregunta 4 -->
+                            <div id="collapse4" class="collapse" aria-labelledby="heading4" data-parent="#accordionExample">
+                                <div class="card-body lead bg-dark text-justify text-white">Lorem ipsum dolor sur tristique, ipsum nisl mattis lacus, uis ultricies ex orci a nunc. Etiam nec lobortis q risus, ac laoreet risus. 
+                                </div>
+                
+                            </div>
+                                   
+                                
+                        </div>
+                    </div>
+                </div>
+            </div>
+           
+        </section>
+    </div>
+
+
+    <!-- fin prueba cambio 2 -->
 
     <p type="hidden" class="titulocont"> Contacto </p>
     <div class="container">

@@ -26,4 +26,4 @@ class Color extends ActiveRecord{
 }
 
 
-// Hoola
+// Este es mi primer comentario de prueba
