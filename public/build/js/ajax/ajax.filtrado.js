@@ -85,12 +85,15 @@ function obtenerProducto() {
       success: function (e) {
         const { data } = JSON.parse(e);
         precioMulti = data.pro_precioMulti; //precioMulti => variable global, para otras func.
+        //precioEstand = data.pro_precio;
+        //console.log(color)
 
         $("#id").val(data.id);// para input 
-        document.getElementById("pro_precio").innerHTML = "Precio: S/."+data.pro_precio;
-        document.getElementById("pro_tamano").innerHTML = data.pro_tamano;
+        document.getElementById("pro_precio").innerHTML = "Precio estandar en color "+data.pro_color+": S/."+data.pro_precio;
+        document.getElementById("pro_precioMulti").innerHTML = `<i class="fa-solid fa-tags"></i> Precio multicolor: S/.`+data.pro_precioMulti;
+        document.getElementById("pro_tamano").innerHTML = "Tamaño: "+data.pro_tamano+ ` (cm)<sup>2</sup>`;
         document.getElementById("pro_nombre").innerHTML = data.pro_nombre;
-        document.getElementById("pro_color").innerHTML = data.pro_color;
+        //document.getElementById("pro_color").innerHTML = data.pro_color;
       },
     });
   });
@@ -130,17 +133,18 @@ slider.oninput = function() {
 } */
 
 
-function seleccionarColor(){
-  let selectColor = document.getElementById('selectColor');
-  let color = selectColor.value;
-console.log(precioMulti);
-  if(color == "MULTICOLOR"){
-
-    document.getElementById('lblColorSeleccionado').innerHTML = `<i class="fa-solid fa-tags"></i> Precio Multicolor: S/.${precioMulti}`;
-  }
-  else{
-    document.getElementById('lblColorSeleccionado').innerHTML = $color;
-  }
+// function seleccionarColor(){
+//   let selectColor = document.getElementById('selectColor');
+//   let color = selectColor.value;
+// console.log(precioMulti);
+//   if(color == "Multicolor"){
+//     document.getElementById("pro_precio").innerHTML = `<i class="fa-solid fa-tags"></i> Precio Multicolor: S/.${precioMulti}`;
+//     //document.getElementById('lblColorSeleccionado').innerHTML = `<i class="fa-solid fa-tags"></i> Precio Multicolor: S/.${precioMulti}`;
+//   }
+//   else{
+//     // document.getElementById('lblColorSeleccionado').innerHTML = $color ;
+//     document.getElementById("pro_precio").innerHTML = `Precio Estandar: S/.${precioEstand}`;
+//   }
   
-}
+// }
 

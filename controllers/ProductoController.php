@@ -230,10 +230,35 @@ class ProductoController
             ]);
         }
     }
+
+    //necesario para enviar el color del producto a la factura del carrito
+    public static function agregarCarritoColor()
+    {
+        if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+            $colorV = $_POST['colorV'];
+            $_SESSION['colorV'] = $colorV; //nueva varibale session
+
+            echo json_encode([
+                "colorV" => $colorV
+            ]);
+        }
+    }
+
+
     public static function getdata(){
         $data = Producto::find($_SESSION['pro_vermas']); //cambie user por cliente, lo mismo pero con mas informacion
         echo json_encode([
             'data'=>$data
+        ]);
+    }
+
+    //necesario para recibir el color del producto en la factura del carrito
+    public static function getdataCart(){
+        $data = Producto::find($_SESSION['pro_vermas']); //cambie user por cliente, lo mismo pero con mas informacion
+        $colorV = $_SESSION['colorV'];
+        echo json_encode([
+            'data'=>$data,
+            'colorV'=>$colorV
         ]);
     }
 

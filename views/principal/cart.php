@@ -2,6 +2,7 @@
 
 	$signo='<i class="fa-solid fa-circle-minus"></i>';
 	$listCart=null;
+	
 
 	if($listCart!=null)
 		{ 
@@ -10,7 +11,8 @@
 			$id='<label id="id"></label>';
 			$nombre='<label id="nombre"></label>';
 			$precio='<label id="precio"></label>';
-			$list=array($id,$nombre,$precio);
+			$color='<label id="color"></label>';
+			$list=array($id,$nombre,$precio,$color);
 			array_push($listCart, $list);
 
 		}
@@ -20,8 +22,8 @@
 			$id='<label id="id"></label>';
 			$nombre='<label id="nombre"></label>';
 			$precio='<label id="precio"></label>';
-
-			$listCart[]=array($id,$nombre,$precio);
+			$color='<label id="color"></label>';
+			$listCart[]=array($id,$nombre,$precio,$color);
 
 		}
 
@@ -55,7 +57,8 @@
 						echo "<th>$cart[0]</th>";
 						echo "<th>$cart[1]</th>";
 						echo "<th>$cart[2]</th>";
-						echo "<th></th>";
+						echo "<th>$cart[3]</th>";
+						// echo "<th>$color</th>";
 						echo "<th>$signo</th>";
 						echo "</tr>";
 					}

@@ -56,9 +56,16 @@
                         <input type="hidden" id="id" value="formNegocio">
 
                             <div style="float: left;"class="modal-field">
-                                <label id="precio" type="text" id="pro_precio" class="font-weight-bold text-white bg-transparent text-left form-control border-0"></label>                      
+                                <label id="precio" type="text" class="font-weight-bold text-white bg-transparent text-left form-control border-0"></label>
+                                <!-- <div class="modal-field">
+                                    <label type="text" id="pro_precio" class="font-weight-bold text-white bg-transparent text-center form-control my-3 border-0"></label>
+                                </div>                       -->
                                 <label id="tamano" type="text" id="pro_tamano" class="font-weight-bold text-white bg-transparent text-left form-control border-0"></label>
-                                <label id="color" type="text" id="pro_color" class="font-weight-bold text-white bg-transparent text-left form-control border-0"></label>
+                                <!-- <label id="color" type="text" id="pro_color" class="font-weight-bold text-white bg-transparent text-left form-control border-0"></label> -->
+                                <select id="selectColor" name="color" onchange="seleccionarColor2();" class="neontextlanding border-0 border bg-transparent rounded w-100 me-1 me-sm-4 my-3 d-block">
+                                    <option id="proColor" value="Otro"></option>
+                                    <option id="proMulti" value="Multicolor">Multicolor</option>
+                                </select>
                              
                             </div>
                                 
@@ -66,7 +73,7 @@
                                 
                                 
                                 <div class="pt-3 pb-3">
-                                <i class="fa-solid fa-dolly"></i><a onclick="sendCart(), window.location.href='/cart'" class="neonbottonlanding btn btn-primary my-sm-3 border-0" style="width: auto; height:auto font-size: 18px;" id="productodet"> Comprar </a>
+                                <i class="fa-solid fa-dolly"></i><a onclick="agregarCarritoColor(); window.location.href='/cart'" class="neonbottonlanding btn btn-primary my-sm-3 border-0" style="width: auto; height:auto font-size: 18px;" id="productodet1"> Agregar al carrito </a>
                                 </div>
                             </form>
 

@@ -120,6 +120,9 @@
                             <div class="modal-field">
                                 <label type="text" id="pro_precio" class="font-weight-bold text-white bg-transparent text-center form-control my-3 border-0"></label>
                             </div>
+                            <div class="modal-field">
+                                <label type="text" id="pro_precioMulti" class="font-weight-bold text-white bg-transparent text-center form-control my-3 border-0"></label>
+                            </div>
                             <span id="lblColorSeleccionado" style="color: white; font-weight: bolder;"></span>
                             <div class="modal-field">
                                 <label type="text" id="pro_tamano" class="font-weight-bold text-white bg-transparent text-center form-control my-3 border-0"></label>
@@ -128,11 +131,12 @@
                             <!-- <div class="modal-field">
                                 <label type="text" id="pro_color" class="font-weight-bold text-white bg-transparent text-center form-control my-3 border-0"></label>
                             </div> -->
+
                             
-                            <select id="selectColor" name="color" onchange="seleccionarColor();" class="neontextlanding border-0 border bg-transparent rounded w-100 me-1 me-sm-4 my-3 d-block">
+                            <!-- <select id="selectColor" name="color" onchange="seleccionarColor();" class="neontextlanding border-0 border bg-transparent rounded w-100 me-1 me-sm-4 my-3 d-block">
                                 <option id="pro_color" value="${pro_color}">${pro_color}</option>
-                                <option id="proMulti" value="MULTICOLOR">MULTICOLOR</option>
-                            </select>         
+                                <option id="proMulti" value="Multicolor">Multicolor</option>
+                            </select>          -->
                             <div class="pt-3 pb-3">
                                 <input type="hidden" id="id" value="formNegocio">
                                 <button type="submit" onclick="window.location.href='/ProductoDetallado'" class="neonbottonlanding btn btn-primary d-block mx-auto" style="width: 40%; height:30% font-size: 20px;" id="productodet">Ver más</button>

@@ -16,23 +16,44 @@ function tableAll()
 function sendCart() 
 {
     console.log("funciona");
+
     $.ajax({
-        url: '/producto/getdata',
+        url: '/producto/getdataCart',
         type: 'GET',
         success: function(e){
-            var {data} = JSON.parse(e);
+            var { data , colorV} = JSON.parse(e);
             console.log(data);
+            console.log(colorV);
             precioMulti = data.pro_precioMulti; //precioMulti => variable global, para otras func
 
-            $(document).ready(function() {
-                $('#id').text(data.id);
-                $('#nombre').text(data.pro_nombre);
-                $('#precio').append("S/.",data.pro_precio);
-                $('#color').append(data.pro_color);
-                $('#precioMulti').append("S/.",data.pro_precioMulti);
-                $('#detalles').text(data.pro_descripcion);
-                $('#tamano').append("Dimensiones: ",data.pro_tamano);
-            });
+            if(colorV == "Multicolor"){
+
+                $(document).ready(function() {
+                    $('#id').text(data.id);
+                    $('#nombre').text(data.pro_nombre);
+                    $('#precio').append("S/.",data.pro_precioMulti);
+                    $('#color').append("Multicolor");
+                    //$('#precioMulti').append("S/.",data.pro_precioMulti);
+                    $('#detalles').text(data.pro_descripcion);
+                    $('#tamano').append("Dimensiones: ",data.pro_tamano);
+                });
+
+            }
+
+            else{
+
+                $(document).ready(function() {
+                    $('#id').text(data.id);
+                    $('#nombre').text(data.pro_nombre);
+                    $('#precio').append("S/.",data.pro_precio);
+                    $('#color').append(data.pro_color);
+                    //$('#precioMulti').append("S/.",data.pro_precioMulti);
+                    $('#detalles').text(data.pro_descripcion);
+                    $('#tamano').append("Dimensiones: ",data.pro_tamano);
+                });
+
+            }
+
         }   
     });
     /*console.log("funciona");

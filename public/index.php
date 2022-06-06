@@ -37,6 +37,7 @@ $router = new Router();
     $router->get('/producto/listar',[ProductoController::class,"listarP"]);
     $router->get('/producto/conseguirproducto',[ProductoController::class,"conseguirproducto"]);
     $router->get('/producto/getdata',[ProductoController::class,'getdata']);
+    $router->get('/producto/getdataCart',[ProductoController::class,'getdataCart']);//necesario para recuperar variable de color
 
     // method post
     $router->post('/producto/create',[ProductoController::class,'create']);
@@ -45,6 +46,7 @@ $router = new Router();
     $router->post('/producto/estado',[ProductoController::class,"estado"]);
     $router->post("/producto/eliminar",[ProductoController::class,"eliminar"]);
     $router->post("/producto/vermas",[ProductoController::class,"vermas"]); //en el frontend
+    $router->post("/producto/agregarCarritoColor",[ProductoController::class,"agregarCarritoColor"]);//necesario para pasar variable de color
     
 //Categoria
     // method get
